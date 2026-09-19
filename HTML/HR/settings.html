@@ -1,0 +1,173 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trellis - HR Settings</title>
+  <!-- Link to central style.css -->
+  <link rel="stylesheet" href="../../CSS/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <a href="#" class="brand-logo">Trellis</a>
+    <ul class="nav-links">
+      <li><a href="../EMPLOYEE/department.html">Departments</a></li>
+      <li><a href="settings.html" class="active">HR Settings</a></li>
+      <li><a href="../EMPLOYEE/settings.html">Employee Settings</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="main-wrapper">
+    
+    <div class="page-header">
+      <h1>HR Administration & Control Center</h1>
+      <p>Configure company policies, security credentials, working calendars, and access control.</p>
+    </div>
+
+    <!-- Overview Stats Row -->
+    <div class="card" style="display: flex; justify-content: space-around; text-align: center;">
+      <div>
+        <span style="font-size: 0.8rem; color: var(--text-muted);">Total Working Days</span>
+        <h2 style="color: var(--primary-navy); margin-top: 0.2rem;">240 Days</h2>
+      </div>
+      <div style="border-left: 1px solid var(--border-color); padding-left: 2rem;">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">Official Holidays</span>
+        <h2 style="color: var(--primary-navy); margin-top: 0.2rem;">15 Days</h2>
+      </div>
+      <div style="border-left: 1px solid var(--border-color); padding-left: 2rem;">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">Working Holidays (Swapped)</span>
+        <h2 style="color: var(--primary-navy); margin-top: 0.2rem;">2 Days</h2>
+      </div>
+    </div>
+
+    <!-- 2-Column Main Layout -->
+    <div class="grid-2col">
+      
+      <!-- LEFT COLUMN -->
+      <div>
+        <!-- Holiday & Working Day Adjustment Table -->
+        <div class="card">
+          <h3 style="margin-bottom: 1rem; color: var(--primary-navy);">Holiday & Working Day Calendar</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Holiday Name</th>
+                <th>Original Date</th>
+                <th>Current Status</th>
+                <th>Compensated Off</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Gandhi Jayanti</td>
+                <td>02 Oct 2026</td>
+                <td><span class="badge badge-warning">Worked Day</span></td>
+                <td>10 Oct 2026</td>
+              </tr>
+              <tr>
+                <td>Diwali Festival</td>
+                <td>08 Nov 2026</td>
+                <td><span class="badge badge-success">Official Holiday</span></td>
+                <td>N/A</td>
+              </tr>
+              <tr>
+                <td>Year-End Closure</td>
+                <td>31 Dec 2026</td>
+                <td><span class="badge badge-success">Official Holiday</span></td>
+                <td>N/A</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- System Audit Log (Professional Feature) -->
+        <div class="card">
+          <h3 style="margin-bottom: 1rem; color: var(--primary-navy);">Recent Administrative Actions</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Admin Action</th>
+                <th>Target ID</th>
+                <th>Timestamp</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Password Reset</td>
+                <td>EMP-102 (Rahul)</td>
+                <td>Today, 10:45 AM</td>
+              </tr>
+              <tr>
+                <td>Holiday Swapped</td>
+                <td>All Employees</td>
+                <td>12 Sep 2026</td>
+              </tr>
+              <tr>
+                <td>New Dept Created</td>
+                <td>Marketing (MKT)</td>
+                <td>01 Sep 2026</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+        <!-- Password Reset Form -->
+        <div class="card">
+          <h3 style="margin-bottom: 1rem; color: var(--primary-navy);">Reset Credentials</h3>
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="emp-select">Select Employee</label>
+              <select id="emp-select" class="form-control" required>
+                <option value="">-- Choose Employee --</option>
+                <option value="EMP-101">EMP-101 - Ananya Verma</option>
+                <option value="EMP-102">EMP-102 - Rahul Sharma</option>
+                <option value="EMP-103">EMP-103 - Priya Nair</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="new-pass">Temporary Password</label>
+              <input type="password" id="new-pass" class="form-control" placeholder="••••••••" required>
+            </div>
+            <div class="form-group" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.2rem;">
+              <input type="checkbox" id="force-change" checked>
+              <label for="force-change" style="margin: 0; font-size: 0.8rem;">Force password reset on next login</label>
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%;">Reset Password</button>
+          </form>
+        </div>
+
+        <!-- HR Policy Controls (Professional Feature) -->
+        <div class="card">
+          <h3 style="margin-bottom: 1rem; color: var(--primary-navy);">System Policy Controls</h3>
+          <form action="#" method="POST">
+            <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <strong>Auto-Approve Sick Leave</strong>
+                <p style="font-size: 0.75rem; color: var(--text-muted);">Auto-approve leave requests under 2 days</p>
+              </div>
+              <input type="checkbox" checked>
+            </div>
+
+            <div class="form-group" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+              <div>
+                <strong>Overtime Multiplier</strong>
+                <p style="font-size: 0.75rem; color: var(--text-muted);">Calculate weekend work at 1.5x pay</p>
+              </div>
+              <input type="checkbox" checked>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem; background-color: #475569;">Save Policy Rules</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>
