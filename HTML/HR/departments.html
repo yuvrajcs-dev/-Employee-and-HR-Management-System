@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trellis - HR Department Management</title>
+  <!-- Link to central style.css (3 levels up from HTML/HR/EMPLOYEE/) -->
+  <link rel="stylesheet" href="../../../CSS/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="#" class="brand-logo">Trellis</a>
+    <ul class="nav-links">
+      <li><a href="department.html" class="active">Departments</a></li>
+      <li><a href="../settings.html">HR Settings</a></li>
+      <li><a href="settings.html">Employee Settings</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Wrapper -->
+  <main class="main-wrapper">
+    
+    <div class="page-header" style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <div>
+        <h1>HR Department &amp; Administrative Control</h1>
+        <p>Manage organizational units, monitor allocated budgets, and authorize department creation.</p>
+      </div>
+      <a href="#add-dept-form" class="btn-primary" style="text-decoration: none; display: inline-block;">+ Add Department</a>
+    </div>
+
+    <!-- 1. HR Executive Overview Cards -->
+    <div class="card" style="display: flex; justify-content: space-around; text-align: center;">
+      <div>
+        <span style="font-size: 0.8rem; color: var(--text-muted);">Active Departments</span>
+        <h2 style="color: var(--primary-navy); margin-top: 0.2rem;">6 Active</h2>
+      </div>
+      <div style="border-left: 1px solid var(--border-color); padding-left: 2rem;">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">Total Approved Headcount</span>
+        <h2 style="color: var(--primary-navy); margin-top: 0.2rem;">160 Positions</h2>
+      </div>
+      <div style="border-left: 1px solid var(--border-color); padding-left: 2rem;">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">Annual HR Budget</span>
+        <h2 style="color: var(--primary-navy); margin-top: 0.2rem;">₹1.2 Cr</h2>
+      </div>
+    </div>
+
+    <!-- 2. Main 2-Column Grid Layout -->
+    <div class="grid-2col">
+      
+      <!-- LEFT COLUMN -->
+      <div>
+        <!-- HR Department Budget & Headcount Roster -->
+        <div class="card">
+          <h3 style="margin-bottom: 1rem; color: var(--primary-navy);">Department Roster &amp; Budget Allocation</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Department</th>
+                <th>Dept Head</th>
+                <th>Headcount</th>
+                <th>Quarterly Budget</th>
+                <th>HR Approval</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Human Resources</strong></td>
+                <td>Ananya Verma</td>
+                <td><span class="badge badge-success">12 / 12 Staff</span></td>
+                <td>₹15,00,000</td>
+                <td><span class="badge badge-success">Approved</span></td>
+              </tr>
+              <tr>
+                <td><strong>Engineering</strong></td>
+                <td>Vikram Malhotra</td>
+                <td><span class="badge badge-success">45 / 50 Staff</span></td>
+                <td>₹45,00,000</td>
+                <td><span class="badge badge-success">Approved</span></td>
+              </tr>
+              <tr>
+                <td><strong>Design &amp; UX</strong></td>
+                <td>Priya Nair</td>
+                <td><span class="badge badge-warning">8 / 12 Staff</span></td>
+                <td>₹12,00,000</td>
+                <td><span class="badge badge-warning">Pending Review</span></td>
+              </tr>
+              <tr>
+                <td><strong>Marketing &amp; Sales</strong></td>
+                <td>Rohan Mehta</td>
+                <td><span class="badge badge-success">28 / 30 Staff</span></td>
+                <td>₹22,00,000</td>
+                <td><span class="badge badge-success">Approved</span></td>
+              </tr>
+              <tr>
+                <td><strong>Finance &amp; Payroll</strong></td>
+                <td>Sunita Gupta</td>
+                <td><span class="badge badge-success">15 / 15 Staff</span></td>
+                <td>₹18,00,000</td>
+                <td><span class="badge badge-success">Approved</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- HR Oversight: Department Approvals -->
+        <div class="card">
+          <h3 style="margin-bottom: 1rem; color: var(--primary-navy);">HR Compliance &amp; Policy Status</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Unit Code</th>
+                <th>Location</th>
+                <th>Hiring Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>HR-01</td>
+                <td>Agra HQ</td>
+                <td><span class="badge badge-success">Fully Staffed</span></td>
+                <td><button class="btn-primary" style="padding: 0.3rem 0.75rem; font-size: 0.8rem;">Manage</button></td>
+              </tr>
+              <tr>
+                <td>ENG-02</td>
+                <td>Remote / Hybrid</td>
+                <td><span class="badge badge-warning">Active Recruitment</span></td>
+                <td><button class="btn-primary" style="padding: 0.3rem 0.75rem; font-size: 0.8rem;">Manage</button></td>
+              </tr>
+              <tr>
+                <td>DSG-03</td>
+                <td>Agra HQ</td>
+                <td><span class="badge badge-danger">Urgent Need</span></td>
+                <td><button class="btn-primary" style="padding: 0.3rem 0.75rem; font-size: 0.8rem;">Manage</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Add Department Form -->
+      <div>
+        <div class="card" id="add-dept-form">
+          <h3 style="margin-bottom: 1rem; color: var(--primary-navy);">Create New Department</h3>
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="dept-name">Department Name</label>
+              <input type="text" id="dept-name" class="form-control" placeholder="e.g. Quality Assurance" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="dept-code">Department Code</label>
+              <input type="text" id="dept-code" class="form-control" placeholder="e.g. QA-04" required>
+            </div>
+
+            <div class="form-group">
+              <label for="dept-head">Assign HR Lead / Manager</label>
+              <select id="dept-head" class="form-control" required>
+                <option value="">-- Select HR Manager --</option>
+                <option value="Ananya Verma">Ananya Verma (HR Admin)</option>
+                <option value="Vikram Malhotra">Vikram Malhotra (Tech Lead)</option>
+                <option value="Priya Nair">Priya Nair (Design Lead)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="initial-budget">Allocated Quarterly Budget (₹)</label>
+              <input type="number" id="initial-budget" class="form-control" placeholder="e.g. 1500000" min="100000" required>
+            </div>
+
+            <div class="form-group">
+              <label for="approved-headcount">Approved Maximum Headcount</label>
+              <input type="number" id="approved-headcount" class="form-control" placeholder="e.g. 15" min="1" required>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%;">Authorize &amp; Create</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+</body>
+</html>
