@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee-Leave</title>
+    <link rel="stylesheet" href="../../css/employee/leave.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">
+            <h3>Trellis</h3>
+        </div>
+
+        <div class="items">
+            <a href="portal.html" class="item">My workspace</a>
+            <a href="attendance.html" class="item">Attendance</a>
+            <a href="leave.html" class="item active" aria-current="page">Leave</a>
+            <a href="payslip.html" class="item">Payslips</a>
+        </div>
+
+        <div class="btn-with-profile">
+            <div class="notification">
+                <i class="fa-regular fa-bell" style="color: rgb(179, 179, 180);"></i>
+            </div>
+            <div class="profile">
+                <i class="fa-regular fa-user"></i>
+
+                <span class="status">
+                    <span class="ring"></span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content">
+
+        <div class="leave">
+
+            <div class="leave-header">
+
+                <div class="leave-heading">
+                    <h2>Apply for Leave</h2>
+                    <p>Fill in the details below to submit your leave request.</p>
+                </div>
+
+                <div class="leave-balance">
+
+                    <div class="balance-text">
+                        <span>Leave Balance</span>
+
+                        <strong>
+                            <span id="used-leave">10</span>
+                            <small>/ <span id="out-of">18</span> days</small>
+                        </strong>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                    <p id="remaning-leave">4 days used</p>
+
+                </div>
+
+            </div>
+
+            <form class="leave-form">
+
+                <div class="form-group">
+                    <label for="leave-type">Leave Type</label>
+
+                    <select id="leave-type" name="leave-type">
+                        <option value="">Select leave type</option>
+                        <option value="casual">Casual Leave</option>
+                        <option value="sick">Sick Leave</option>
+                        <option value="earned">Earned Leave</option>
+                        <option value="unpaid">Unpaid Leave</option>
+                    </select>
+                </div>
+
+                <div class="date-row">
+
+                    <div class="form-group">
+                        <label for="from-date">From Date</label>
+
+                        <input type="date" id="from-date" name="from-date">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="to-date">To Date</label>
+
+                        <input type="date" id="to-date" name="to-date">
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">Reason</label>
+
+                    <textarea id="reason" name="reason" rows="5"
+                        placeholder="Enter the reason for your leave..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact">Contact During Leave</label>
+
+                    <input type="text" id="contact" name="contact" placeholder="Enter contact number">
+                </div>
+
+                <div class="form-group">
+                    <label for="document">Supporting Document <span>(Optional)</span></label>
+
+                    <input type="file" id="document" name="document">
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset" class="cancel-btn">
+                        Cancel
+                    </button>
+
+                    <button type="submit" class="submit-btn">
+                        Submit Leave Request
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="leave-request">
+            <div class="request">
+
+                <div>
+                    <h2>Sick leave</h2>
+                    <p>12-13 Sep · 2days</p>
+                </div>
+
+                <div class="leave-status-bar">
+
+                    <div class="status-step completed">
+                        <div class="step-circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span>Submitted</span>
+                    </div>
+
+                    <div class="status-step completed">
+                        <div class="step-circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span>Manager review</span>
+                    </div>
+
+                    <div class="status-step completed">
+                        <div class="step-circle">3</div>
+                        <span>Confirmed</span>
+                    </div>
+
+                </div>
+                <div class="leave-status approved">Approved</div>
+            </div>
+
+            <div class="request">
+
+                <div>
+                    <h2>Annual leave</h2>
+                    <p>14-17 Nov · 3days</p>
+                </div>
+
+                <div class="leave-status-bar">
+
+                    <div class="status-step completed">
+                        <div class="step-circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span>Submitted</span>
+                    </div>
+
+                    <div class="status-step completed">
+                        <div class="step-circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span>Manager review</span>
+                    </div>
+
+                    <div class="status-step active">
+                        <div class="step-circle">3</div>
+                        <span>Confirmed</span>
+                    </div>
+
+                </div>
+                <div class="leave-status awaited">Awaited</div>
+            </div>
+
+            <div class="request">
+
+                <div>
+                    <h2>Annual leave</h2>
+                    <p>14-17 Nov · 3days</p>
+                </div>
+
+                <div class="leave-status-bar">
+
+                    <div class="status-step completed">
+                        <div class="step-circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span>Submitted</span>
+                    </div>
+
+                    <div class="status-step completed">
+                        <div class="step-circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span>Manager review</span>
+                    </div>
+
+                    <div class="status-step completed">
+                        <div class="step-circle">3</div>
+                        <span>Confirmed</span>
+                    </div>
+
+                </div>
+                <div class="leave-status rejected">Rejected</div>
+            </div>
+            
+            <div class="request">
+
+                <div>
+                    <h2>Sick leave</h2>
+                    <p>12-13 Sep · 2days</p>
+                </div>
+
+                <div class="leave-status-bar">
+
+                    <div class="status-step completed">
+                        <div class="step-circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span>Submitted</span>
+                    </div>
+
+                    <div class="status-step completed">
+                        <div class="step-circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span>Manager review</span>
+                    </div>
+
+                    <div class="status-step completed">
+                        <div class="step-circle">3</div>
+                        <span>Confirmed</span>
+                    </div>
+
+                </div>
+                <div class="leave-status approved">Approved</div>
+            </div>
+
+            <div class="request">
+
+                <div>
+                    <h2>Sick leave</h2>
+                    <p>12-13 Sep · 2days</p>
+                </div>
+
+                <div class="leave-status-bar">
+
+                    <div class="status-step completed">
+                        <div class="step-circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span>Submitted</span>
+                    </div>
+
+                    <div class="status-step completed">
+                        <div class="step-circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span>Manager review</span>
+                    </div>
+
+                    <div class="status-step completed">
+                        <div class="step-circle">3</div>
+                        <span>Confirmed</span>
+                    </div>
+
+                </div>
+                <div class="leave-status approved">Approved</div>
+            </div>
+
+            <div class="request">
+
+                <div>
+                    <h2>Sick leave</h2>
+                    <p>12-13 Sep · 2days</p>
+                </div>
+
+                <div class="leave-status-bar">
+
+                    <div class="status-step completed">
+                        <div class="step-circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span>Submitted</span>
+                    </div>
+
+                    <div class="status-step completed">
+                        <div class="step-circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span>Manager review</span>
+                    </div>
+
+                    <div class="status-step completed">
+                        <div class="step-circle">3</div>
+                        <span>Confirmed</span>
+                    </div>
+
+                </div>
+                <div class="leave-status approved">Approved</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../../js/employee/leave.js"></script>
+</body>
+
+</html>
