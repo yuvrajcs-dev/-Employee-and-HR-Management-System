@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trellis — Attendance</title>
+
+    <link rel="stylesheet" href="../css/hr-attendance.css">
+</head>
+
+<body>
+
+<div class="shell">
+
+    
+    <aside class="sidebar">
+
+        <div class="brand">
+            <a href="index.html" class="brand-link">
+
+                <div class="brand-mark"></div>
+
+                <div>
+                    <div class="brand-name">Trellis</div>
+                    <div class="brand-sub">Workforce OS</div>
+                </div>
+
+            </a>
+        </div>
+
+
+        <nav class="nav-group">
+
+            <div class="nav-label">Workspace</div>
+
+            <a class="nav-item" href="index.html">
+                <span class="nav-icon">▦</span>
+                Overview
+            </a>
+
+            <a class="nav-item" href="people.html">
+                <span class="nav-icon">♙</span>
+                People
+            </a>
+
+            <a class="nav-item active" href="attendance.html">
+                <span class="nav-icon">▣</span>
+                Attendance
+            </a>
+
+            <a class="nav-item" href="leave.html">
+                <span class="nav-icon">✈</span>
+                Leave
+            </a>
+
+            <a class="nav-item" href="payroll.html">
+                <span class="nav-icon">₹</span>
+                Payroll
+            </a>
+
+        </nav>
+
+
+        <nav class="nav-group">
+
+            <div class="nav-label">Organization</div>
+
+            <a class="nav-item" href="departments.html">
+                <span class="nav-icon">◇</span>
+                Departments
+            </a>
+
+            <a class="nav-item" href="settings.html">
+                <span class="nav-icon">⚙</span>
+                Settings
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-foot">
+
+            <a href="profile.html" class="profile-link">
+
+                <div class="avatar-sm">AV</div>
+
+                <div>
+                    <div class="foot-name">Ananya Verma</div>
+                    <div class="foot-role">HR Manager</div>
+                </div>
+
+            </a>
+
+            <a href="login.html" class="logout-btn">
+                → 
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    
+    <main class="main">
+
+        <!-- HEADER -->
+
+        <div class="toolbar">
+
+            <div>
+                <h1>Attendance</h1>
+
+                <p>
+                    Organization-wide presence, September 2026
+                </p>
+            </div>
+
+            <button class="btn-ghost">
+                ↓ &nbsp; Export report
+            </button>
+
+        </div>
+
+
+       
+
+        <div class="chip-row">
+
+            <div class="chip active">
+                ▣ &nbsp; Organization
+            </div>
+
+            <div class="chip">
+                ♙ &nbsp; Individual employee
+            </div>
+
+        </div>
+
+
+        
+
+        <div class="cal-wrap">
+
+            <!-- CALENDAR PANEL -->
+
+            <div class="panel">
+
+                <div class="panel-title">
+                    Daily attendance rate
+                </div>
+
+                <div class="panel-sub">
+                    Each day is shaded by what share of the organization
+                    checked in.
+                </div>
+
+
+               
+
+                <div class="cal-head-row">
+
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                    <div>Sun</div>
+
+                </div>
+
+
+               
+
+                <div class="cal-grid">
+
+                    <div class="cal-cell empty"></div>
+
+                    <div class="cal-cell rate-mid">1</div>
+                    <div class="cal-cell rate-high">2</div>
+                    <div class="cal-cell rate-mid">3</div>
+                    <div class="cal-cell rate-good">4</div>
+
+                    <div class="cal-cell weekend">5</div>
+                    <div class="cal-cell weekend">6</div>
+
+                    <div class="cal-cell rate-good">7</div>
+                    <div class="cal-cell rate-mid">8</div>
+                    <div class="cal-cell rate-mid">9</div>
+                    <div class="cal-cell rate-high">10</div>
+                    <div class="cal-cell rate-good">11</div>
+
+                    <div class="cal-cell weekend">12</div>
+                    <div class="cal-cell weekend">13</div>
+
+                    <div class="cal-cell rate-low">14</div>
+                    <div class="cal-cell rate-low">15</div>
+                    <div class="cal-cell rate-low">16</div>
+                    <div class="cal-cell rate-mid">17</div>
+                    <div class="cal-cell rate-good">18</div>
+
+                    <div class="cal-cell weekend">19</div>
+                    <div class="cal-cell weekend">20</div>
+
+                    <div class="cal-cell rate-good">21</div>
+                    <div class="cal-cell rate-good">22</div>
+                    <div class="cal-cell rate-mid">23</div>
+                    <div class="cal-cell rate-good">24</div>
+                    <div class="cal-cell rate-good">25</div>
+
+                    <div class="cal-cell weekend">26</div>
+                    <div class="cal-cell weekend">27</div>
+
+                    <div class="cal-cell rate-low">28</div>
+                    <div class="cal-cell rate-low">29</div>
+                    <div class="cal-cell rate-low">30</div>
+
+                    <div class="cal-cell empty"></div>
+                    <div class="cal-cell empty"></div>
+                    <div class="cal-cell empty"></div>
+                    <div class="cal-cell empty"></div>
+
+                </div>
+
+
+               
+
+                <div class="cal-legend">
+
+                    <div class="cal-legend-item">
+                        <span class="legend low"></span>
+                        Below 88% · needs attention
+                    </div>
+
+                    <div class="cal-legend-item">
+                        <span class="legend mid"></span>
+                        88–93% · fair
+                    </div>
+
+                    <div class="cal-legend-item">
+                        <span class="legend good"></span>
+                        93–97% · good
+                    </div>
+
+                    <div class="cal-legend-item">
+                        <span class="legend high"></span>
+                        97%+ · excellent
+                    </div>
+
+                    <div class="cal-legend-item">
+                        <span class="legend weekend"></span>
+                        Weekend
+                    </div>
+
+                </div>
+
+
+               
+
+                <div class="cal-detail">
+
+                    <div class="cal-detail-empty">
+
+                        📊
+
+                        Attendance data is shown for
+                        September 2026.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+           
+
+            <div class="panel">
+
+                <div class="panel-title">
+                    This month
+                </div>
+
+
+                <div class="stat-block">
+
+                    <div class="stat-block-num">
+                        92.4%
+                    </div>
+
+                    <div class="stat-block-label">
+                        Overall attendance rate
+                    </div>
+
+                </div>
+
+
+                <div class="stat-block">
+
+                    <div class="stat-block-num">
+                        9:14 AM
+                    </div>
+
+                    <div class="stat-block-label">
+                        Average check-in time
+                    </div>
+
+                </div>
+
+
+                <div class="stat-block">
+
+                    <div class="stat-block-num">
+                        14
+                    </div>
+
+                    <div class="stat-block-label">
+                        Late arrivals this month
+                    </div>
+
+                </div>
+
+
+                <div class="stat-block">
+
+                    <div class="stat-block-num">
+                        6
+                    </div>
+
+                    <div class="stat-block-label">
+                        Unplanned absences
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+       
+
+        <div class="section-heading">
+            Today's check-ins
+        </div>
+
+
+        <div class="panel table-panel">
+
+            <table class="data-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Employee</th>
+                        <th>Department</th>
+                        <th>Check-in</th>
+                        <th>Check-out</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Rahul Sharma</td>
+                        <td>IT</td>
+                        <td>09:02 AM</td>
+                        <td>—</td>
+
+                        <td>
+                            <span class="status-pill pill-teal">
+                                <span class="sq"></span>
+                                Present
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Priya Nair</td>
+                        <td>IT</td>
+                        <td>09:41 AM</td>
+                        <td>—</td>
+
+                        <td>
+                            <span class="status-pill pill-amber">
+                                <span class="sq"></span>
+                                Late
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Sana Iqbal</td>
+                        <td>Marketing</td>
+                        <td>08:57 AM</td>
+                        <td>—</td>
+
+                        <td>
+                            <span class="status-pill pill-teal">
+                                <span class="sq"></span>
+                                Present
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Farhan Ali</td>
+                        <td>Finance</td>
+                        <td>—</td>
+                        <td>—</td>
+
+                        <td>
+                            <span class="status-pill pill-rose">
+                                <span class="sq"></span>
+                                Absent
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Neha Gupta</td>
+                        <td>HR</td>
+                        <td>—</td>
+                        <td>—</td>
+
+                        <td>
+                            <span class="status-pill pill-brand">
+                                <span class="sq"></span>
+                                On leave
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

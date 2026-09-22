@@ -1,0 +1,834 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+
+    --dark: #1b4543;
+    --dark-light: #315e5a;
+
+    --background: #f6f8f6;
+    --white: #ffffff;
+
+    --text: #1d2928;
+    --muted: #71807d;
+
+    --border: #e1e6e3;
+
+    --teal: #4d8b78;
+    --amber: #d6a83d;
+    --rose: #b85c6b;
+    --brand: #597b88;
+}
+
+
+
+
+body {
+
+    font-family: "Inter", sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+}
+
+
+
+
+.shell {
+
+    min-height: 100vh;
+
+    display: flex;
+
+}
+
+
+
+
+.sidebar {
+
+    width: 250px;
+
+    min-height: 100vh;
+
+    background: var(--dark);
+
+    color: white;
+
+    padding: 28px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+
+.brand {
+
+    margin-bottom: 45px;
+
+}
+
+.brand-link {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: white;
+
+    text-decoration: none;
+
+}
+
+.brand-mark {
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 8px;
+
+    background: #d6a83d;
+
+}
+
+.brand-name {
+
+    font-family: "Fraunces", serif;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+}
+
+.brand-sub {
+
+    font-size: 11px;
+
+    opacity: .65;
+
+    margin-top: 2px;
+
+}
+
+
+
+.nav-group {
+
+    margin-bottom: 30px;
+
+}
+
+.nav-label {
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    color: rgba(255,255,255,.5);
+
+    padding-left: 10px;
+
+    margin-bottom: 10px;
+
+}
+
+.nav-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 12px;
+
+    margin-bottom: 4px;
+
+    border-radius: 8px;
+
+    color: rgba(255,255,255,.72);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: .2s;
+
+}
+
+.nav-item:hover {
+
+    background: rgba(255,255,255,.08);
+
+    color: white;
+
+}
+
+.nav-item.active {
+
+    background: rgba(255,255,255,.13);
+
+    color: white;
+
+}
+
+.nav-icon {
+
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 15px;
+
+}
+
+
+
+
+.sidebar-foot {
+
+    margin-top: auto;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255,255,255,.12);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+.sidebar-user {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: white;
+
+    text-decoration: none;
+
+}
+
+.avatar-sm {
+
+    width: 34px;
+
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: #d6a83d;
+
+    color: var(--dark);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+.foot-name {
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+.foot-role {
+
+    font-size: 10px;
+
+    opacity: .55;
+
+    margin-top: 2px;
+
+}
+
+.logout {
+
+    width: 32px;
+
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: rgba(255,255,255,.07);
+
+    color: white;
+
+    text-decoration: none;
+
+}
+
+
+
+
+.main {
+
+    flex: 1;
+
+    padding: 40px 50px;
+
+    max-width: 1400px;
+
+}
+
+
+
+.toolbar {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+
+}
+
+.toolbar h1 {
+
+    font-family: "Fraunces", serif;
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+    margin-bottom: 4px;
+
+}
+
+.toolbar p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+
+
+.chip-row {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+.chip {
+
+    border: 1px solid var(--border);
+
+    background: white;
+
+    color: var(--muted);
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+}
+
+.chip.active {
+
+    background: var(--dark);
+
+    color: white;
+
+    border-color: var(--dark);
+
+}
+
+
+
+
+.section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 14px;
+
+}
+
+.section-heading h2 {
+
+    font-family: "Fraunces", serif;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+}
+
+.count-badge {
+
+    width: 25px;
+
+    height: 25px;
+
+    border-radius: 50%;
+
+    background: #e9efec;
+
+    color: var(--dark);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+.recent-heading {
+
+    margin-top: 35px;
+
+}
+
+
+
+
+.leave-card {
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 13px;
+
+    padding: 23px;
+
+    margin-bottom: 15px;
+
+}
+
+.leave-card.decided {
+
+    opacity: .88;
+
+}
+
+
+
+
+.leave-top {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+.leave-name {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 5px;
+
+}
+
+.leave-type {
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+}
+
+
+
+
+.status-pill {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+.status-square {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+}
+
+
+
+
+.status-pill.amber {
+
+    background: #fff5dc;
+
+    color: #9a7419;
+
+}
+
+.status-pill.amber .status-square {
+
+    background: var(--amber);
+
+}
+
+
+
+
+.status-pill.brand {
+
+    background: #edf3f5;
+
+    color: #52717c;
+
+}
+
+.status-pill.brand .status-square {
+
+    background: var(--brand);
+
+}
+
+
+
+
+.status-pill.teal {
+
+    background: #e7f2ed;
+
+    color: #39745f;
+
+}
+
+.status-pill.teal .status-square {
+
+    background: var(--teal);
+
+}
+
+
+
+
+.status-pill.rose {
+
+    background: #f8e8eb;
+
+    color: #9e4758;
+
+}
+
+.status-pill.rose .status-square {
+
+    background: var(--rose);
+
+}
+
+
+
+.stepper {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    margin: 25px 0;
+
+}
+
+.step {
+
+    position: relative;
+
+    text-align: center;
+
+}
+
+.step-line {
+
+    position: absolute;
+
+    top: 12px;
+
+    left: -50%;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: #e5e9e7;
+
+}
+
+.step:first-child .step-line {
+
+    display: none;
+
+}
+
+.step-dot {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 25px;
+
+    height: 25px;
+
+    margin: 0 auto 7px;
+
+    border-radius: 50%;
+
+    background: #edf0ee;
+
+    color: var(--muted);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+.step.done .step-dot {
+
+    background: var(--teal);
+
+    color: white;
+
+}
+
+.step.current .step-dot {
+
+    background: var(--dark);
+
+    color: white;
+
+}
+
+.step.done .step-line {
+
+    background: var(--teal);
+
+}
+
+.step-label {
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+
+
+
+.leave-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 8px;
+
+    border-top: 1px solid #edf0ee;
+
+    padding-top: 16px;
+
+}
+
+.approve-button {
+
+    border: none;
+
+    background: var(--dark);
+
+    color: white;
+
+    padding: 9px 15px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+.reject-button {
+
+    border: none;
+
+    background: #f8e8eb;
+
+    color: #9e4758;
+
+    padding: 9px 15px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+
+.rejection-message {
+
+    margin-top: 8px;
+
+    color: #8b777b;
+
+    font-size: 11px;
+
+}
+
+
+
+
+@media (max-width: 900px) {
+
+    .sidebar {
+
+        width: 210px;
+
+    }
+
+    .main {
+
+        padding: 30px;
+
+    }
+
+    .toolbar {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .shell {
+
+        flex-direction: column;
+
+    }
+
+    .sidebar {
+
+        width: 100%;
+
+        min-height: auto;
+
+    }
+
+    .nav-group {
+
+        display: none;
+
+    }
+
+    .main {
+
+        padding: 25px 18px;
+
+    }
+
+    .leave-top {
+
+        flex-direction: column;
+
+    }
+
+    .chip-row {
+
+        flex-wrap: wrap;
+
+    }
+
+    .step-label {
+
+        font-size: 8px;
+
+    }
+
+}
