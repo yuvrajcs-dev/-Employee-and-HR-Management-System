@@ -11,8 +11,8 @@ function selectRole(role){
 
     document.getElementById('login-email').value =
         role === 'hr'
-            ? 'ananya.verma@trellis.co'
-            : 'rahul.sharma@trellis.co';
+            ? 'ananya.verma@hrm.co'
+            : 'rahul.sharma@hrm.co';
 }
 
 function doLogin(){
