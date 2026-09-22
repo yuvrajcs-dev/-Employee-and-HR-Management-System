@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee-Attendance</title>
+    <link rel="stylesheet" href="../../css/employee/attendance.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">
+            <h3>Trellis</h3>
+        </div>
+
+        <div class="items">
+            <a href="portal.html" class="item">My workspace</a>
+            <a href="attendance.html" class="item active" aria-current="page">Attendance</a>
+            <a href="leave.html" class=" item ">Leave</a>
+            <a href="payslip.html" class=" item ">Payslips</a>
+        </div>
+
+        <div class="btn-with-profile">
+            <div class="notification">
+                <i class="fa-regular fa-bell" style="color: rgb(179, 179, 180);"></i>
+            </div>
+            <div class="profile">
+                <i class="fa-regular fa-user"></i>
+
+                <span class="status">
+                    <span class="ring"></span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+    <main class="content">
+
+        <div class="heading">
+            <div>
+                <h2>My attendance</h2>
+                <p>Your check-in history and monthly summary.</p>
+            </div> 
+            <div class="heading-chip">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span class="current-period">September 2026</span>
+            </div>
+        </div>
+
+        <div class="partition">
+
+            <div class="calendar">
+                <div class="month-year">
+                    <h4 class="month-year-heading"></h4>
+
+                    <div class="btn">   
+                        <button id="prev">
+                            <i class="fa-solid fa-angle-left" style="color: rgb(255, 255, 255);"></i>
+                        </button>
+                        <button id="next">
+                            <i class="fa-solid fa-angle-right" style="color: rgb(255, 255, 255);"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="weeks">
+                    <span>MON</span>
+                    <span>TUE</span>
+                    <span>WED</span>
+                    <span>THU</span>
+                    <span>FRI</span>
+                    <span>SAT</span>
+                    <span>SUN</span>
+                </div>
+                <div class="days" id="day-s"></div>
+
+                <!-- Legend -->
+                <div class="legend">
+                    <div>
+                        <span class="legend-box present-box"></span>
+                        Present
+                    </div>
+
+                    <div>
+                        <span class="legend-box late-box"></span>
+                        Late
+                    </div>
+
+                    <div>
+                        <span class="legend-box absent-box"></span>
+                        Absent
+                    </div>
+
+                    <div>
+                        <span class="legend-box leave-box"></span>
+                        On leave
+                    </div>
+
+                    <div>
+                        <span class="legend-box weekend-box"></span>
+                        Weekend
+                    </div>
+                </div>
+
+                <div class="details">
+                    <p class="empty-message">
+                        <i class="fa-regular fa-hand-point-up fa-lg" style="color: rgb(192, 194, 194);"></i>
+                        Click any working day above for details.
+                    </p>
+                    <div>
+                        <h4 id="date"></h4>
+                        <h5><span id="in"></span><span id="out"></span></h5>
+        
+                        <h2 id="status"></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="attendance-detail">
+                <div class="summary-title">
+                    <span>Monthly snapshot</span>
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="summary-metric total-attendance">
+                    <div class="metric-icon">
+                        <i class="fa-solid fa-percent"></i>
+                    </div>
+                    <div>
+                        <h5>Overall</h5>
+                        <h3 id="percent">100%</h3>
+                    </div>
+                </div>
+                <div class="checkin-divider"></div>
+                <div class="summary-metric avg-checkin-time">
+                    <div class="metric-icon">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <div>
+                        <h5>Average check-in</h5>
+                        <h3 id="avg-checkIn"></h3>
+                    </div>
+                </div>
+                <div class="checkin-divider"></div>
+                <div class="summary-metric late-arrivale">
+                    <div class="metric-icon">
+                        <i class="fa-solid fa-person-running"></i>
+                    </div>
+                    <div>
+                        <h5>Late arrivals</h5>
+                        <h3 id="late">0</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="../../js/employee/attendance.js"></script>
+</body>
+
+</html>

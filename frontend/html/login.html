@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="section">
+        <div class="left">
+            <div class="circle-top-left"></div>
+            <div class="content">
+                <div class="top">
+                    <h3>Trellis</h3>
+                </div>
+                <div class="middle">
+                    <h1>One workspace for your whole organization.</h1>
+                    <p>Attendance, leave, payroll and people — brought together in a single, calm view for HR teams and
+                        employees alike.</p>
+                </div>
+
+                <div class="bottom">
+                    <p>Trellis Technologies Pvt. Ltd. · Workforce OS</p>
+                </div>
+            </div>
+            <div class="circle-bottom-right"></div>
+        </div>
+
+
+        <div class="right">
+            <div class="circle-top-left-right"></div>
+
+            <div class="container">
+                <div class="right-top">
+                    <h3>Welcome back</h3>
+                    <p>Sign in to continue to your workspace.</p>
+                </div>
+
+                <div class="choice">
+                    <div class="role active" id="role-hr" data-role="manager" onclick="selectRole('hr')">
+                        💼 &nbsp; HR Manager
+                    </div>
+
+                    <div class="role" id="role-employee" data-role="employee" onclick="selectRole('employee')">
+                        ♙ &nbsp; Employee
+                    </div>
+                </div>
+
+                <form action="#" class="form">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="login-email" value="ananya.verma@trellis.co">
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" value="••••••••••" placeholder="1234567890">
+
+                    <button type="button" onclick="doLogin()">Sign in</button>
+
+                <p class="signing">
+                    Signing in as <span class="choose" id="role-label" >HR Manager</span></b>
+                </p>
+
+            </form>
+
+            <div class="circle-bottom-right-right"></div>
+        </div>  
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>
