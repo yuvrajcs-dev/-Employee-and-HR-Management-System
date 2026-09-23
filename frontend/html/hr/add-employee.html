@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HRM — Add Employee</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../css/hr/add-employee.css">
+</head>
+<body>
+
+<div class="shell">
+
+  
+  <aside class="sidebar">
+    <div class="brand">
+      <a href="dashboard.html" style="display:flex;align-items:center;gap:10px;color:inherit;">
+      <div class="brand-mark"></div>
+      <div>
+        <div class="brand-name">HRM</div>
+        <div class="brand-sub">Workforce OS</div>
+      </div>
+      </a>
+    </div>
+
+    <nav class="nav-group">
+      <div class="nav-label">Workspace</div>
+      <a class="nav-item " href="dashboard.html"><i class="bi bi-grid-1x2"></i> Overview</a>
+      <a class="nav-item active" href="people.html"><i class="bi bi-people"></i> People</a>
+      <a class="nav-item " href="attendance.html"><i class="bi bi-calendar-check"></i> Attendance</a>
+      <a class="nav-item " href="leave.html"><i class="bi bi-airplane"></i> Leave</a>
+      <a class="nav-item " href="payroll.html"><i class="bi bi-wallet2"></i> Payroll</a>
+    </nav>
+
+    <nav class="nav-group">
+      <div class="nav-label">Organization</div>
+      <a class="nav-item " href="departments.html"><i class="bi bi-diagram-3"></i> Departments</a>
+      <a class="nav-item " href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+    </nav>
+
+    <div class="sidebar-foot" style="justify-content:space-between;">
+      <a href="profile.html" style="display:flex;align-items:center;gap:10px;color:inherit;">
+        <div class="avatar-sm">AV</div>
+        <div>
+          <div class="foot-name">Ananya Verma</div>
+          <div class="foot-role">HR Manager</div>
+        </div>
+      </a>
+      <a href="../login.html" class="icon-btn" style="width:32px;height:32px;flex-shrink:0;" title="Log out">
+        <i class="bi bi-box-arrow-right"></i>
+      </a>
+    </div>
+  </aside>
+
+  
+  <main class="main">
+
+    <div class="toolbar">
+      <div>
+        <h1 style="font-size:1.7rem;margin-bottom:4px;">Add employee</h1>
+        <p style="color:var(--ink-soft);font-size:.9rem;margin:0;">Create a new employee record</p>
+      </div>
+      <a href="people.html" class="btn-ghost"><i class="bi bi-x-lg"></i> Cancel</a>
+    </div>
+
+    <div class="bento">
+      <div class="panel">
+        <div class="panel-title" style="margin-bottom:18px;">Personal details</div>
+        <div class="form-row">
+          <label>Full name</label>
+          <input type="text" placeholder="e.g. Meera Kulkarni">
+        </div>
+        <div class="form-row">
+          <label>Email</label>
+          <input type="email" placeholder="meera.kulkarni@hrm.co">
+        </div>
+        <div class="form-row" style="margin-bottom:0;">
+          <label>Phone</label>
+          <input type="text" placeholder="+91 90000 00000">
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title" style="margin-bottom:18px;">Employment details</div>
+        <div class="form-row">
+          <label>Department</label>
+          <select><option>IT</option><option>Marketing</option><option>Finance</option><option>HR</option></select>
+        </div>
+        <div class="form-row">
+          <label>Job title</label>
+          <input type="text" placeholder="e.g. Product Designer">
+        </div>
+        <div class="form-row" style="margin-bottom:0;">
+          <label>Employment type</label>
+          <select><option>Full-time</option><option>Part-time</option><option>Contract</option></select>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:18px;">
+      <div class="panel-title" style="margin-bottom:18px;">Start details</div>
+      <div class="info-grid">
+        <div class="form-row" style="margin-bottom:0;">
+          <label>Joining date</label>
+          <input type="text" placeholder="dd/mm/yyyy">
+        </div>
+        <div class="form-row" style="margin-bottom:0;">
+          <label>Reporting manager</label>
+          <select><option>Arjun Kapoor</option><option>Sana Iqbal</option><option>Divya Rao</option><option>Ananya Verma</option></select>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:12px;margin-top:22px;">
+      <a href="people.html" class="btn-primary"><i class="bi bi-check-lg"></i> Save employee</a>
+      <a href="people.html" class="btn-ghost">Cancel</a>
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>

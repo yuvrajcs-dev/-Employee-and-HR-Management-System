@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HRM — Employee Profile</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../css/hr/profile.css">
+</head>
+<body>
+
+<div class="shell">
+
+  
+  <aside class="sidebar">
+    <div class="brand">
+      <a href="dashboard.html" style="display:flex;align-items:center;gap:10px;color:inherit;">
+      <div class="brand-mark"></div>
+      <div>
+        <div class="brand-name">HRM</div>
+        <div class="brand-sub">Workforce OS</div>
+      </div>
+      </a>
+    </div>
+
+    <nav class="nav-group">
+      <div class="nav-label">Workspace</div>
+      <a class="nav-item " href="dashboard.html"><i class="bi bi-grid-1x2"></i> Overview</a>
+      <a class="nav-item active" href="people.html"><i class="bi bi-people"></i> People</a>
+      <a class="nav-item " href="attendance.html"><i class="bi bi-calendar-check"></i> Attendance</a>
+      <a class="nav-item " href="leave.html"><i class="bi bi-airplane"></i> Leave</a>
+      <a class="nav-item " href="payroll.html"><i class="bi bi-wallet2"></i> Payroll</a>
+    </nav>
+
+    <nav class="nav-group">
+      <div class="nav-label">Organization</div>
+      <a class="nav-item " href="departments.html"><i class="bi bi-diagram-3"></i> Departments</a>
+      <a class="nav-item " href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+    </nav>
+
+    <div class="sidebar-foot" style="justify-content:space-between;">
+      <a href="profile.html" style="display:flex;align-items:center;gap:10px;color:inherit;">
+        <div class="avatar-sm">AV</div>
+        <div>
+          <div class="foot-name">Ananya Verma</div>
+          <div class="foot-role">HR Manager</div>
+        </div>
+      </a>
+      <a href="../login.html" class="icon-btn" style="width:32px;height:32px;flex-shrink:0;" title="Log out">
+        <i class="bi bi-box-arrow-right"></i>
+      </a>
+    </div>
+  </aside>
+
+  
+  <main class="main">
+
+    <div class="profile-header">
+      <div class="profile-photo">RS</div>
+      <div>
+        <div class="profile-name">Rahul Sharma</div>
+        <div class="profile-role">Software Developer · IT Department</div>
+        <div class="profile-since">Employee since March 2024</div>
+      </div>
+    </div>
+    <div class="profile-stat-strip">
+      <div class="profile-stat"><div class="profile-stat-num">95%</div><div class="profile-stat-label">Attendance</div></div>
+      <div class="profile-stat"><div class="profile-stat-num">12 days</div><div class="profile-stat-label">Leave balance</div></div>
+      <div class="profile-stat"><div class="profile-stat-num">2.4 yrs</div><div class="profile-stat-label">Experience</div></div>
+    </div>
+
+    <div class="bento" style="margin-top:24px;">
+      <div class="panel">
+        <div class="panel-title" style="margin-bottom:16px;">Personal information</div>
+        <div class="info-row"><div class="k">Email</div><div class="v">rahul.sharma@hrm.co</div></div>
+        <div class="info-row"><div class="k">Phone</div><div class="v">+91 98765 43210</div></div>
+        <div class="info-row"><div class="k">Location</div><div class="v">Delhi NCR, India</div></div>
+        <div class="info-row"><div class="k">Emergency contact</div><div class="v">Meera Sharma</div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-title" style="margin-bottom:16px;">Professional information</div>
+        <div class="info-row"><div class="k">Employee ID</div><div class="v">TRL-1042</div></div>
+        <div class="info-row"><div class="k">Reporting manager</div><div class="v">Arjun Kapoor</div></div>
+        <div class="info-row"><div class="k">Employment type</div><div class="v">Full-time</div></div>
+        <div class="info-row"><div class="k">Work location</div><div class="v">Delhi NCR Office</div></div>
+      </div>
+    </div>
+
+    <div class="section-heading serif">Recent activity</div>
+    <div class="panel">
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-dot" style="background:var(--teal)"></div>
+          <div><div class="t-time">Today, 09:02 AM</div><div class="t-text">Checked in</div></div>
+        </div>
+        <div class="t-item">
+          <div class="t-dot" style="background:var(--amber)"></div>
+          <div><div class="t-time">28 Aug</div><div class="t-text">Submitted a leave request for <b>3–5 Sep</b></div></div>
+        </div>
+        <div class="t-item">
+          <div class="t-dot" style="background:var(--brand)"></div>
+          <div><div class="t-time">1 Aug</div><div class="t-text">Completed annual performance review</div></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>

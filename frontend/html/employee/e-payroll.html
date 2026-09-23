@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HRM - Payslip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="../../css/employee/e-payroll.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                <i class="fa-solid fa-chart-simple"></i>
+            </div>
+
+            <div class="brand-text">
+
+                <div class="brand-name">
+                    HRM
+                </div>
+
+                <div class="brand-subtitle">
+                    Workforce OS
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="nav-section">
+
+            <div class="nav-title">
+                WORKSPACE
+            </div>
+
+
+            <a href="#" class="nav-item">
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-table-cells-large"></i>
+                </span>
+
+                <span>
+                    Overview
+                </span>
+
+            </a>
+
+
+            <a href="#" class="nav-item">
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-users"></i>
+                </span>
+
+                <span>
+                    People
+                </span>
+
+            </a>
+
+
+            <a href="#" class="nav-item">
+
+                <span class="nav-icon">
+                    <i class="fa-regular fa-calendar-check"></i>
+                </span>
+
+                <span>
+                    Attendance
+                </span>
+
+            </a>
+
+
+            <a href="#" class="nav-item">
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-plane"></i>
+                </span>
+
+                <span>
+                    Leave
+                </span>
+
+            </a>
+
+
+            <a href="#" class="nav-item active">
+
+                <span class="active-indicator"></span>
+
+                <span class="nav-icon">
+                    <i class="fa-regular fa-calendar"></i>
+                </span>
+
+                <span>
+                    Payroll
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <div class="nav-section organization">
+
+            <div class="nav-title">
+                ORGANIZATION
+            </div>
+
+
+            <a href="#" class="nav-item">
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-sitemap"></i>
+                </span>
+
+                <span>
+                    Departments
+                </span>
+
+            </a>
+
+
+            <a href="#" class="nav-item">
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+        </div>
+
+        <div class="profile">
+
+            <div class="profile-avatar">
+                AV
+            </div>
+
+            <div class="profile-info">
+
+                <div class="profile-name">
+                    Ananya Verma
+                </div>
+
+                <div class="profile-role">
+                    HR Manager
+                </div>
+
+            </div>
+
+
+            <button class="logout-btn">
+
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <div class="nav">
+        <div class="logo">
+            <h3>HRM</h3>
+        </div>
+
+        <div class="items">
+            <a href="portal.html" class="item">My workspace</a>
+            <a href="attendance.html" class="item">Attendance</a>
+            <a href="leave.html" class="item">Leave</a>
+            <a href="e-payroll.html" class="item active" aria-current="page">Payslips</a>
+        </div>
+
+        <div class="btn-with-profile">
+            <div class="notification">
+                <i class="fa-regular fa-bell" style="color: rgb(179, 179, 180);"></i>
+            </div>
+            <div class="profile">
+                <i class="fa-regular fa-user"></i>
+                <span class="status">
+                    <span class="ring"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+
+        <div class="top-bar">
+
+            <a href="portal.html" class="back-link">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                <span>
+                    Back
+                </span>
+
+            </a>
+
+
+            <button class="print-btn">
+
+                <i class="fa-solid fa-print"></i>
+
+                <span>
+                    Print / Save as PDF
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <section class="payslip-card">
+
+
+                <div class="payslip-logo">
+
+                <i class="fa-solid fa-chart-simple"></i>
+
+            </div>
+
+
+            <div class="employee-info">
+
+
+                <div class="info-item">
+
+                    <div class="info-label">
+                        EMPLOYEE
+                    </div>
+
+                    <div class="info-value">
+                        Rahul Sharma
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-label">
+                        EMPLOYEE ID
+                    </div>
+
+                    <div class="info-value">
+                        TRL-1042
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-label">
+                        DEPARTMENT
+                    </div>
+
+                    <div class="info-value">
+                        IT
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-label">
+                        DESIGNATION
+                    </div>
+
+                    <div class="info-value">
+                        Software Developer
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="pay-details">
+
+
+                <div class="earnings">
+
+                    <h2 class="section-title">
+                        EARNINGS
+                    </h2>
+
+
+                    <div class="pay-row">
+
+                        <span>
+                            Basic pay
+                        </span>
+
+                        <strong>
+                            ₹68,000
+                        </strong>
+
+                    </div>
+
+
+                    <div class="pay-row">
+
+                        <span>
+                            House rent allowance
+                        </span>
+
+                        <strong>
+                            ₹24,000
+                        </strong>
+
+                    </div>
+
+
+                    <div class="pay-row">
+
+                        <span>
+                            Other allowances
+                        </span>
+
+                        <strong>
+                            ₹10,000
+                        </strong>
+
+                    </div>
+
+
+                    <div class="pay-row total-row">
+
+                        <strong>
+                            Gross pay
+                        </strong>
+
+                        <strong>
+                            ₹1,02,000
+                        </strong>
+
+                    </div>
+
+                </div>
+
+                <div class="deductions">
+
+                    <h2 class="section-title">
+                        DEDUCTIONS
+                    </h2>
+
+
+                    <div class="pay-row">
+
+                        <span>
+                            Provident fund
+                        </span>
+
+                        <strong>
+                            ₹6,600
+                        </strong>
+
+                    </div>
+
+
+                    <div class="pay-row">
+
+                        <span>
+                            Professional tax
+                        </span>
+
+                        <strong>
+                            ₹200
+                        </strong>
+
+                    </div>
+
+
+                    <div class="pay-row">
+
+                        <span>
+                            Income tax (TDS)
+                        </span>
+
+                        <strong>
+                            ₹2,800
+                        </strong>
+
+                    </div>
+
+
+                    <div class="pay-row total-row">
+
+                        <strong>
+                            Total deductions
+                        </strong>
+
+                        <strong>
+                            ₹9,600
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="net-pay-box">
+
+                <div class="net-pay-title">
+                    Net pay for August 2026
+                </div>
+
+                <div class="net-pay-amount">
+                    ₹92,400
+                </div>
+
+            </div>
+
+
+    
+
+            <div class="action-buttons">
+
+
+                <button class="secondary-btn">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    <span>
+                        Download PDF
+                    </span>
+
+                </button>
+
+
+                <button class="secondary-btn">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <span>
+                        Email to employee
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>

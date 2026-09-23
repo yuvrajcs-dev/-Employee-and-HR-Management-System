@@ -1,0 +1,1248 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", Arial, sans-serif;
+    background: #f0f2f7;
+    color: #151a27;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================
+   APP
+========================================= */
+
+.app {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 296px;
+    min-height: 100vh;
+
+    background: #ffffff;
+    border-right: 1px solid #dfe3eb;
+
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    z-index: 20;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+    height: 125px;
+
+    display: flex;
+    align-items: flex-start;
+
+    padding: 42px 30px 0;
+}
+
+.brand-icon {
+    width: 36px;
+    height: 36px;
+
+    background: #394c91;
+
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    flex-shrink: 0;
+}
+
+.brand-icon i {
+    font-size: 17px;
+}
+
+
+.brand-text {
+    margin-left: 13px;
+    margin-top: -1px;
+}
+
+.brand-name {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 25px;
+    line-height: 27px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.4px;
+}
+
+.brand-subtitle {
+    color: #8290a6;
+
+    font-size: 13px;
+    line-height: 20px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.nav-section {
+    padding: 10px 20px 0;
+}
+
+.nav-title {
+    color: #8794aa;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin: 0 13px 14px;
+}
+
+
+.nav-item {
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 13px;
+
+    margin-bottom: 3px;
+
+    border-radius: 10px;
+
+    color: #3e526f;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    position: relative;
+
+    transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+    background: #f5f6fb;
+}
+
+.nav-item.active {
+    background: #e9ecf8;
+
+    color: #293d82;
+
+    font-weight: 600;
+}
+
+
+.active-indicator {
+    position: absolute;
+
+    left: -20px;
+    top: 12px;
+
+    width: 4px;
+    height: 24px;
+
+    background: #394d91;
+
+    border-radius: 0 3px 3px 0;
+}
+
+
+.nav-icon {
+    width: 22px;
+    height: 22px;
+
+    margin-right: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-icon i {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   ORGANIZATION
+========================================= */
+
+.organization {
+    margin-top: 22px;
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.profile {
+    margin-top: auto;
+
+    border-top: 1px solid #dce1e9;
+
+    margin-left: 21px;
+    margin-right: 21px;
+
+    padding: 20px 10px 25px;
+
+    display: flex;
+    align-items: center;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #405394;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    flex-shrink: 0;
+}
+
+.profile-info {
+    margin-left: 11px;
+}
+
+.profile-name {
+    color: #192131;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.profile-role {
+    margin-top: 3px;
+
+    color: #8290a6;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+.logout-btn {
+    width: 40px;
+    height: 40px;
+
+    margin-left: auto;
+
+    border: 1px solid #d9dfeb;
+
+    background: white;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    color: #52637c;
+
+    transition: 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: #f6f7fa;
+}
+
+.logout-btn i {
+    font-size: 17px;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+    margin-left: 296px;
+
+    width: calc(100% - 296px);
+
+    min-height: 100vh;
+
+    padding: 40px 48px 70px;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 32px;
+    line-height: 38px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.7px;
+
+    color: #121722;
+}
+
+.page-header p {
+    margin-top: 4px;
+
+    font-size: 16px;
+
+    color: #64728a;
+}
+
+
+/* =========================================
+   APPROVE BUTTON
+========================================= */
+
+.approve-btn {
+    height: 46px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #394c91;
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.approve-btn:hover {
+    background: #30427f;
+}
+
+.approve-btn i {
+    font-size: 15px;
+}
+
+
+/* =========================================
+   PAYROLL SUMMARY
+========================================= */
+
+.payroll-summary {
+    background: #ffffff;
+
+    border: 1px solid #dce1ea;
+
+    border-radius: 18px;
+
+    padding: 28px 29px 25px;
+
+    margin-bottom: 40px;
+}
+
+
+.summary-top {
+    display: flex;
+    align-items: center;
+
+    gap: 24px;
+}
+
+.summary-title {
+    color: #8090a8;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+}
+
+.pending-count {
+    background: #fff3d8;
+
+    color: #d18c13;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 7px 25px;
+
+    border-radius: 20px;
+}
+
+
+.total-pay {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 48px;
+    line-height: 58px;
+
+    font-weight: 600;
+
+    letter-spacing: -1.4px;
+
+    margin-top: 4px;
+    margin-bottom: 31px;
+}
+
+
+/* =========================================
+   DEPARTMENT ROWS
+========================================= */
+
+.department-row {
+    min-height: 48px;
+
+    display: grid;
+
+    grid-template-columns:
+        112px
+        minmax(200px, 1fr)
+        100px;
+
+    align-items: center;
+
+    column-gap: 20px;
+
+    border-bottom: 1px solid #dce1e8;
+}
+
+.department-row:last-child {
+    border-bottom: none;
+}
+
+
+.department-name {
+    font-size: 16px;
+
+    color: #4b5c76;
+
+    font-weight: 500;
+}
+
+
+.progress-container {
+    height: 10px;
+
+    background: #e2e5ec;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+
+    border-radius: 20px;
+}
+
+.progress-bar.it {
+    background: #394b8e;
+}
+
+.progress-bar.marketing {
+    background: #ca7040;
+}
+
+.progress-bar.finance {
+    background: #269273;
+}
+
+.progress-bar.hr {
+    background: #d39c24;
+}
+
+
+.department-amount {
+    text-align: right;
+
+    color: #151a24;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   RECORDS
+========================================= */
+
+.records-section h2 {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 23px;
+    line-height: 30px;
+
+    font-weight: 700;
+
+    color: #171b26;
+
+    margin-bottom: 18px;
+}
+
+
+.records-card {
+    background: #ffffff;
+
+    border: 1px solid #dce1ea;
+
+    border-radius: 18px;
+
+    padding: 0 28px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.table-row {
+    min-height: 65px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(190px, 1.2fr)
+        minmax(150px, 1fr)
+        minmax(130px, 0.8fr)
+        minmax(130px, 0.8fr)
+        minmax(100px, 0.8fr);
+
+    align-items: center;
+
+    border-top: 1px solid #dce1e8;
+
+    color: #172031;
+
+    font-size: 16px;
+}
+
+.table-row:first-child {
+    border-top: none;
+}
+
+
+.table-header {
+    min-height: 54px;
+
+    color: #7d8ba2;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.4px;
+}
+
+
+.employee {
+    font-weight: 500;
+}
+
+.net-pay {
+    font-weight: 500;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 68px;
+
+    height: 32px;
+
+    padding: 0 16px;
+
+    border-radius: 18px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.status.paid {
+    background: #e1f2ed;
+    color: #15967d;
+}
+
+.status.processing {
+    background: #fff1d5;
+    color: #d19218;
+}
+
+.status.pending {
+    background: #fbe7ea;
+    color: #df4654;
+}
+
+
+/* =========================================
+   LINKS
+========================================= */
+
+.view-slip {
+    color: #233e86;
+
+    font-weight: 600;
+}
+
+.view-slip:hover {
+    opacity: 0.7;
+}
+
+.pending-text {
+    color: #9ba7b9;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .sidebar {
+        width: 245px;
+    }
+
+    .main-content {
+        margin-left: 245px;
+
+        width: calc(100% - 245px);
+
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .sidebar {
+        width: 80px;
+    }
+
+    .brand {
+        justify-content: center;
+
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .brand-text {
+        display: none;
+    }
+
+    .nav-title {
+        display: none;
+    }
+
+    .nav-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .nav-item {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .nav-item > span:last-child {
+        display: none;
+    }
+
+    .nav-icon {
+        margin-right: 0;
+    }
+
+    .organization {
+        margin-top: 15px;
+    }
+
+    .profile {
+        margin-left: 10px;
+        margin-right: 10px;
+
+        justify-content: center;
+    }
+
+    .profile-info,
+    .logout-btn {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 80px;
+
+        width: calc(100% - 80px);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .main-content {
+        padding: 25px 18px 50px;
+    }
+
+    .page-header {
+        gap: 20px;
+    }
+
+    .approve-btn {
+        padding: 0 14px;
+    }
+
+    .approve-btn span {
+        display: none;
+    }
+
+    .payroll-summary {
+        padding: 22px 18px;
+    }
+
+    .total-pay {
+        font-size: 38px;
+    }
+
+    .department-row {
+        grid-template-columns: 85px 1fr;
+
+        row-gap: 5px;
+
+        padding: 10px 0;
+    }
+
+    .department-amount {
+        grid-column: 2;
+
+        text-align: left;
+    }
+
+    .progress-container {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .department-name {
+        grid-row: 1 / span 2;
+    }
+
+    .records-card {
+        padding: 0 16px;
+
+        overflow-x: auto;
+    }
+
+    .table-row {
+        min-width: 780px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .sidebar {
+        width: 64px;
+    }
+
+    .main-content {
+        margin-left: 64px;
+
+        width: calc(100% - 64px);
+
+        padding: 20px 12px 40px;
+    }
+
+    .brand {
+        height: 100px;
+    }
+
+    .page-header h1 {
+        font-size: 26px;
+    }
+
+    .payroll-summary {
+        border-radius: 14px;
+    }
+
+    .records-card {
+        border-radius: 14px;
+    }
+}
+
+/* Keep payroll aligned with the shared HR dashboard layout. */
+body {
+    background: #EEF0F4;
+    color: #161A22;
+    font-family: 'Inter', -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 252px 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: auto;
+    min-height: 100vh;
+    height: 100vh;
+    background: #FFFFFF;
+    border-right: 1px solid #DBDFE7;
+    padding: 28px 18px;
+    position: sticky;
+    left: auto;
+    top: 0;
+    bottom: auto;
+}
+
+.brand {
+    height: auto;
+    align-items: center;
+    padding: 4px 8px 26px;
+}
+
+.brand-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: linear-gradient(155deg, #33427E 0%, #4A5A9E 100%);
+}
+
+.brand-icon i {
+    font-size: 14px;
+}
+
+.brand-text {
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.brand-name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+.brand-subtitle {
+    color: #8B93A3;
+    font-size: .68rem;
+    line-height: normal;
+    margin-top: 2px;
+}
+
+.nav-section {
+    padding: 0;
+    margin-bottom: 22px;
+}
+
+.nav-title {
+    color: #8B93A3;
+    font-size: .68rem;
+    letter-spacing: .08em;
+    margin: 0 10px 8px;
+}
+
+.nav-item {
+    height: auto;
+    padding: 9px 10px;
+    margin-bottom: 2px;
+    border-radius: 9px;
+    color: #565D6D;
+    font-size: .89rem;
+    gap: 11px;
+}
+
+.nav-item.active {
+    background: #EBEEF8;
+    color: #33427E;
+}
+
+.active-indicator {
+    left: -18px;
+    top: 50%;
+    width: 3px;
+    height: 18px;
+    border-radius: 3px;
+    background: #33427E;
+    transform: translateY(-50%);
+}
+
+.nav-icon {
+    width: 18px;
+    height: auto;
+    margin-right: 0;
+}
+
+.nav-icon i {
+    font-size: .95rem;
+}
+
+.organization {
+    margin-top: 0;
+}
+
+.profile {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 16px 0 0 8px;
+    border-top: 1px solid #DBDFE7;
+}
+
+.profile-avatar {
+    width: 34px;
+    height: 34px;
+    background: linear-gradient(155deg, #4A5A9E, #33427E);
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: .78rem;
+}
+
+.profile-info {
+    margin-left: 10px;
+}
+
+.profile-name {
+    color: #161A22;
+    font-size: .84rem;
+}
+
+.profile-role {
+    margin-top: 0;
+    color: #8B93A3;
+    font-size: .72rem;
+}
+
+.logout-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+}
+
+.main-content {
+    margin-left: 0;
+    width: auto;
+    max-width: 1220px;
+    padding: 34px 40px 60px;
+}
+
+.page-header {
+    align-items: flex-end;
+    margin-bottom: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.page-header h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 2rem;
+    line-height: normal;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: #161A22;
+}
+
+.page-header p {
+    margin-top: 0;
+    font-size: .95rem;
+    color: #565D6D;
+}
+
+.approve-btn {
+    height: 38px;
+    padding: 0 16px;
+    border-radius: 10px;
+    background: #33427E;
+    gap: 8px;
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+.payroll-summary,
+.records-card {
+    border-color: #DBDFE7;
+    border-radius: 16px;
+}
+
+.payroll-summary {
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.summary-title,
+.table-header {
+    color: #8B93A3;
+    font-size: .78rem;
+}
+
+.pending-count {
+    font-size: .8rem;
+    padding: 6px 13px;
+}
+
+.total-pay {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 3.6rem;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 0;
+    margin: 4px 0 24px;
+}
+
+.department-name,
+.department-amount,
+.table-row {
+    font-size: .85rem;
+}
+
+.department-row {
+    min-height: 42px;
+    grid-template-columns: 112px minmax(120px, 1fr) 100px;
+    column-gap: 14px;
+}
+
+.records-section h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.1rem;
+    line-height: normal;
+    font-weight: 500;
+    color: #161A22;
+    margin: 34px 0 14px;
+}
+
+.records-card {
+    padding: 0 24px;
+}
+
+.table-row {
+    min-height: 56px;
+    color: #161A22;
+}
+
+.table-header {
+    min-height: 48px;
+    letter-spacing: .06em;
+}
+
+.status {
+    min-width: 68px;
+    height: 28px;
+    padding: 0 13px;
+    font-size: .78rem;
+}
+
+@media (max-width: 850px) {
+    .app {
+        grid-template-columns: 80px 1fr;
+    }
+
+    .sidebar {
+        width: 80px;
+    }
+
+    .brand {
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .brand-text,
+    .nav-title,
+    .profile-info,
+    .logout-btn {
+        display: none;
+    }
+
+    .nav-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .nav-item {
+        justify-content: center;
+        padding: 9px 0;
+    }
+
+    .nav-item > span:last-child {
+        display: none;
+    }
+
+    .nav-icon {
+        margin-right: 0;
+    }
+
+    .profile {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .main-content {
+        padding: 25px 18px 50px;
+    }
+
+    .payroll-summary {
+        padding: 22px 18px;
+    }
+
+    .total-pay {
+        font-size: 38px;
+    }
+
+    .department-row {
+        grid-template-columns: 85px 1fr;
+        row-gap: 5px;
+        padding: 10px 0;
+    }
+
+    .department-amount {
+        grid-column: 2;
+        text-align: left;
+    }
+
+    .progress-container {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .department-name {
+        grid-row: 1 / span 2;
+    }
+
+    .records-card {
+        padding: 0 16px;
+        overflow-x: auto;
+    }
+
+    .table-row {
+        min-width: 780px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app {
+        grid-template-columns: 64px 1fr;
+    }
+
+    .sidebar {
+        width: 64px;
+    }
+
+    .main-content {
+        padding: 20px 12px 40px;
+    }
+
+    .brand {
+        padding-top: 4px;
+    }
+
+    .page-header h1 {
+        font-size: 1.7rem;
+    }
+}
