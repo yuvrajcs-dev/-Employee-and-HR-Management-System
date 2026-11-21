@@ -1,0 +1,119 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HRM - Employee Settings</title>
+<link rel="stylesheet" href="../../css/employee/style.css">
+</head>
+<body>
+
+  <!-- Main Container -->
+  <main class="main-wrapper">
+    <a class="back-link" href="portal.html">← Back to Workspace</a>
+    
+    <div class="page-header">
+      <h1>Employee Settings &amp; Compensation</h1>
+      <p>View personal configurations, payroll structure, and security settings.</p>
+    </div>
+
+    <!-- 1. Salary & Compensation Breakdown -->
+    <div class="card">
+      <h3 style="margin-bottom: 1.2rem; color: var(--primary-navy);">Salary Structure (Monthly)</h3>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Type</th>
+            <th>Amount (₹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Basic Salary</td>
+            <td>Earnings</td>
+            <td>₹60,000</td>
+          </tr>
+          <tr>
+            <td>House Rent Allowance (HRA)</td>
+            <td>Earnings</td>
+            <td>₹25,000</td>
+          </tr>
+          <tr>
+            <td>Special Allowance</td>
+            <td>Earnings</td>
+            <td>₹17,000</td>
+          </tr>
+          <tr>
+            <td>Provident Fund (PF)</td>
+            <td>Deduction</td>
+            <td>-₹4,800</td>
+          </tr>
+          <tr>
+            <td>Professional Tax</td>
+            <td>Deduction</td>
+            <td>-₹4,800</td>
+          </tr>
+          <tr style="font-weight: 700; background-color: var(--accent-light);">
+            <td>Net Payable Amount</td>
+            <td>Total</td>
+            <td>₹92,400</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 2. Security & Compliance Overview -->
+    <div class="card">
+      <h3 style="margin-bottom: 1.2rem; color: var(--primary-navy);">Security &amp; Compliance Overview</h3>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+        <!-- 2FA Card -->
+        <div style="background: var(--bg-light); padding: 1rem; border-radius: 8px;">
+          <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 4px;">Two-Factor Auth</span>
+          <strong style="font-size: 1rem; color: var(--text-dark);">Enabled</strong>
+          <span class="badge badge-success" style="margin-left: 0.5rem;">Secure</span>
+        </div>
+
+        <!-- Tax Card -->
+        <div style="background: var(--bg-light); padding: 1rem; border-radius: 8px;">
+          <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 4px;">Tax Declaration</span>
+          <strong style="font-size: 1rem; color: var(--text-dark);">FY 2026-27</strong>
+          <span class="badge badge-success" style="margin-left: 0.5rem;">Verified</span>
+        </div>
+
+        <!-- Insurance Card -->
+        <div style="background: var(--bg-light); padding: 1rem; border-radius: 8px;">
+          <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 4px;">Health Coverage</span>
+          <strong style="font-size: 1rem; color: var(--text-dark);">Family Floater</strong>
+          <span class="badge badge-warning" style="margin-left: 0.5rem;">Active</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Personal Details Form -->
+    <div class="card">
+      <h3 style="margin-bottom: 1.2rem; color: var(--primary-navy);">Personal Details &amp; Preferences</h3>
+      <form action="#" method="POST">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label for="emp-email">Email Address</label>
+            <input type="email" id="emp-email" class="form-control" value="rahul.sharma@trellis.co">
+          </div>
+          <div class="form-group">
+            <label for="emp-phone">Phone Number</label>
+            <input type="tel" id="emp-phone" class="form-control" value="+91 98765 43210">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="bank-acc">Direct Deposit Bank Account</label>
+          <input type="text" id="bank-acc" class="form-control" value="XXXX-XXXX-9012">
+        </div>
+        <button type="submit" class="btn-primary">Save Changes</button>
+      </form>
+    </div>
+
+  </main>
+</body>
+</html>
