@@ -7,8 +7,8 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f7f5f0;
-    color: #263a38;
+    background: #ffffff;
+    color: #18324f;
 }
 
 
@@ -28,7 +28,7 @@ body {
 
     background: #ffffff;
 
-    border-right: 1px solid #e2e4df;
+    border-right: 1px solid #e2e8f0;
 
     display: flex;
     flex-direction: column;
@@ -46,7 +46,7 @@ body {
     gap: 10px;
 
     text-decoration: none;
-    color: #263a38;
+    color: #18324f;
 }
 
 
@@ -54,7 +54,7 @@ body {
     width: 34px;
     height: 34px;
 
-    background: #1b4543;
+    background: #2563eb;
 
     border-radius: 8px;
 
@@ -70,7 +70,7 @@ body {
     width: 12px;
     height: 12px;
 
-    background: #f0be6f;
+    background: #bfdbfe;
 
     border-radius: 50%;
 
@@ -87,7 +87,7 @@ body {
 
 .brand-sub {
     font-size: 11px;
-    color: #7c8986;
+    color: #718096;
 
     margin-top: 2px;
 }
@@ -106,7 +106,7 @@ body {
 
     letter-spacing: 1px;
 
-    color: #89938f;
+    color: #8492a6;
 
     margin: 10px 10px;
 }
@@ -126,20 +126,20 @@ body {
 
     text-decoration: none;
 
-    color: #596865;
+    color: #52647a;
 
     font-size: 14px;
 }
 
 
 .nav-item:hover {
-    background: #f1f4f1;
+    background: #eff6ff;
 }
 
 
 .nav-item.active {
-    background: #e8f1ed;
-    color: #1b4543;
+    background: #dbeafe;
+    color: #2563eb;
     font-weight: bold;
 }
 
@@ -160,7 +160,7 @@ body {
 
     padding: 18px;
 
-    border-top: 1px solid #e2e4df;
+    border-top: 1px solid #e2e8f0;
 
     display: flex;
     align-items: center;
@@ -177,7 +177,7 @@ body {
 
     text-decoration: none;
 
-    color: #263a38;
+    color: #18324f;
 }
 
 
@@ -187,7 +187,7 @@ body {
 
     border-radius: 50%;
 
-    background: #dceae5;
+    background: #dbeafe;
 
     display: flex;
     align-items: center;
@@ -196,7 +196,7 @@ body {
     font-size: 12px;
     font-weight: bold;
 
-    color: #1b4543;
+    color: #2563eb;
 }
 
 
@@ -208,7 +208,7 @@ body {
 
 .foot-role {
     font-size: 11px;
-    color: #87918e;
+    color: #8492a6;
 
     margin-top: 3px;
 }
@@ -217,7 +217,7 @@ body {
 .logout-btn {
     text-decoration: none;
 
-    color: #66736f;
+    color: #64748b;
 
     font-size: 20px;
 }
@@ -252,7 +252,7 @@ body {
 
 
 .toolbar p {
-    color: #788480;
+    color: #718096;
 
     font-size: 14px;
 }
@@ -262,7 +262,7 @@ body {
 .btn-ghost {
     background: white;
 
-    border: 1px solid #d7ddd9;
+    border: 1px solid #cbd5e1;
 
     border-radius: 8px;
 
@@ -270,14 +270,14 @@ body {
 
     font-size: 13px;
 
-    color: #304541;
+    color: #1e40af;
 
     cursor: pointer;
 }
 
 
 .btn-ghost:hover {
-    background: #f2f5f2;
+    background: #eff6ff;
 }
 
 
@@ -294,7 +294,7 @@ body {
 .chip {
     padding: 9px 14px;
 
-    border: 1px solid #dce1dd;
+    border: 1px solid #dbe3ef;
 
     background: white;
 
@@ -302,16 +302,16 @@ body {
 
     font-size: 13px;
 
-    color: #687470;
+    color: #64748b;
 }
 
 
 .chip.active {
-    background: #1b4543;
+    background: #2563eb;
 
     color: white;
 
-    border-color: #1b4543;
+    border-color: #2563eb;
 }
 
 
@@ -320,7 +320,7 @@ body {
 .panel {
     background: white;
 
-    border: 1px solid #e1e5e1;
+    border: 1px solid #e2e8f0;
 
     border-radius: 12px;
 
@@ -342,7 +342,7 @@ body {
 
     font-weight: bold;
 
-    color: #263a38;
+    color: #18324f;
 
     margin-bottom: 6px;
 }
@@ -376,7 +376,7 @@ body {
 
     font-weight: bold;
 
-    color: #8a9490;
+    color: #8492a6;
 }
 
 
@@ -413,9 +413,9 @@ body {
 
 
 .cal-cell.weekend {
-    background: #f1f2ef;
+    background: #f1f5f9;
 
-    color: #9ca4a1;
+    color: #94a3b8;
 }
 
 
@@ -434,14 +434,14 @@ body {
 
 
 .cal-cell.rate-good {
-    background: #cdebe0;
+    background: #dbeafe;
 
-    color: #285d50;
+    color: #1e40af;
 }
 
 
 .cal-cell.rate-high {
-    background: #1b4543;
+    background: #2563eb;
 
     color: white;
 }
@@ -460,7 +460,7 @@ body {
 
     padding-top: 18px;
 
-    border-top: 1px solid #edf0ed;
+    border-top: 1px solid #eaf0f8;
 }
 
 
@@ -473,7 +473,7 @@ body {
 
     font-size: 11px;
 
-    color: #707b77;
+    color: #64748b;
 }
 
 
@@ -498,17 +498,17 @@ body {
 
 
 .legend.good {
-    background: #cdebe0;
+    background: #dbeafe;
 }
 
 
 .legend.high {
-    background: #1b4543;
+    background: #2563eb;
 }
 
 
 .legend.weekend {
-    background: #f1f2ef;
+    background: #f1f5f9;
 }
 
 
@@ -520,16 +520,16 @@ body {
 
     border-radius: 8px;
 
-    background: #f7f8f5;
+    background: #f8fbff;
 
-    border: 1px solid #e5e8e4;
+    border: 1px solid #e2e8f0;
 }
 
 
 .cal-detail-empty {
     text-align: center;
 
-    color: #89938f;
+    color: #8492a6;
 
     font-size: 13px;
 }
@@ -540,7 +540,7 @@ body {
 .stat-block {
     padding: 20px 0;
 
-    border-bottom: 1px solid #edf0ed;
+    border-bottom: 1px solid #eaf0f8;
 }
 
 
@@ -554,7 +554,7 @@ body {
 
     font-weight: bold;
 
-    color: #1b4543;
+    color: #2563eb;
 
     margin-bottom: 5px;
 }
@@ -563,7 +563,7 @@ body {
 .stat-block-label {
     font-size: 12px;
 
-    color: #858f8b;
+    color: #8492a6;
 }
 
 
@@ -578,7 +578,7 @@ body {
 
     margin-bottom: 14px;
 
-    color: #263a38;
+    color: #18324f;
 }
 
 
@@ -605,11 +605,11 @@ body {
 
     letter-spacing: .6px;
 
-    color: #89938f;
+    color: #8492a6;
 
     padding: 15px 10px;
 
-    border-bottom: 1px solid #e5e8e5;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 
@@ -618,9 +618,9 @@ body {
 
     font-size: 13px;
 
-    border-bottom: 1px solid #edf0ed;
+    border-bottom: 1px solid #eaf0f8;
 
-    color: #4b5b57;
+    color: #475569;
 }
 
 
@@ -630,7 +630,7 @@ body {
 
 
 .data-table tbody tr:hover {
-    background: #fafbf9;
+    background: #f8fbff;
 }
 
 
@@ -662,14 +662,14 @@ body {
 
 
 .pill-teal {
-    background: #e0f1eb;
+    background: #dbeafe;
 
-    color: #286657;
+    color: #1d4ed8;
 }
 
 
 .pill-teal .sq {
-    background: #328c74;
+    background: #3b82f6;
 }
 
 
