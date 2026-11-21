@@ -878,3 +878,45 @@ a {
         font-size: 15px;
     }
 }
+
+
+/* =========================================
+   PAYSLIP MONTH SELECTOR
+========================================= */
+
+.payslip-month-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border: 1px solid #dce1ea;
+    border-radius: 11px;
+    padding: 0 14px;
+    height: 46px;
+}
+
+.payslip-month-selector .month-nav {
+    background: none;
+    border: none;
+    color: #6b7a92;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.payslip-month-selector .month-nav:hover { color: #394c91; }
+
+.payslip-month-selector .month-display {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a2233;
+    min-width: 120px;
+    text-align: center;
+}
+
+@media (max-width: 650px) {
+    .payslip-month-selector .month-display { min-width: 90px; font-size: 13px; }
+}

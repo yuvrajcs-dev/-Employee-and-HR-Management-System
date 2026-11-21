@@ -165,21 +165,29 @@
 
                 <h1>Payroll</h1>
 
-                <p>
-                    August 2026 payroll cycle
-                </p>
+                <p class="cycle-label">August 2026 payroll cycle</p>
 
             </div>
 
-            <button class="approve-btn">
+            <div class="header-actions">
 
-                <i class="fa-regular fa-circle-check"></i>
+                <div class="month-selector">
+                    <button class="month-nav" id="prevMonth"><i class="fa-solid fa-chevron-left"></i></button>
+                    <span class="month-display">August 2026</span>
+                    <button class="month-nav" id="nextMonth"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
 
-                <span>
-                    Approve all
-                </span>
+                <button class="export-btn">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Export CSV</span>
+                </button>
 
-            </button>
+                <button class="approve-btn">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>Approve all</span>
+                </button>
+
+            </div>
 
         </header>
 
@@ -289,9 +297,13 @@
 
         <section class="records-section">
 
-            <h2>
-                Individual records
-            </h2>
+            <div class="records-top">
+                <h2>Individual records</h2>
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="Search employee...">
+                </div>
+            </div>
 
             <div class="records-card">
 
