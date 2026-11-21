@@ -75,6 +75,9 @@ a {
     align-items: flex-start;
 
     padding: 42px 30px 0;
+
+    text-decoration: none;
+    color: inherit;
 }
 
 .brand-icon {
