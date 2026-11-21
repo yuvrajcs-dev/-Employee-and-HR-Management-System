@@ -8,21 +8,21 @@
 
 :root {
 
-    --dark: #1b4543;
-    --dark-light: #315e5a;
+    --dark: #2563eb;
+    --dark-light: #1d4ed8;
 
-    --background: #f6f8f6;
+    --background: #ffffff;
     --white: #ffffff;
 
-    --text: #1d2928;
-    --muted: #71807d;
+    --text: #18324f;
+    --muted: #718096;
 
-    --border: #e1e6e3;
+    --border: #e2e8f0;
 
-    --teal: #4d8b78;
-    --amber: #d6a83d;
+    --teal: #3b82f6;
+    --amber: #60a5fa;
     --rose: #b85c6b;
-    --brand: #597b88;
+    --brand: #2563eb;
 }
 
 
@@ -58,9 +58,9 @@ body {
 
     min-height: 100vh;
 
-    background: var(--dark);
+    background: #ffffff;
 
-    color: white;
+    color: var(--text);
 
     padding: 28px 18px;
 
@@ -87,7 +87,7 @@ body {
 
     gap: 10px;
 
-    color: white;
+    color: var(--text);
 
     text-decoration: none;
 
@@ -101,7 +101,7 @@ body {
 
     border-radius: 8px;
 
-    background: #d6a83d;
+    background: #bfdbfe;
 
 }
 
@@ -139,7 +139,7 @@ body {
 
     letter-spacing: 1.5px;
 
-    color: rgba(255,255,255,.5);
+    color: #8492a6;
 
     padding-left: 10px;
 
@@ -161,7 +161,7 @@ body {
 
     border-radius: 8px;
 
-    color: rgba(255,255,255,.72);
+    color: #52647a;
 
     text-decoration: none;
 
@@ -173,17 +173,17 @@ body {
 
 .nav-item:hover {
 
-    background: rgba(255,255,255,.08);
+    background: #eff6ff;
 
-    color: white;
+    color: #1e40af;
 
 }
 
 .nav-item.active {
 
-    background: rgba(255,255,255,.13);
+    background: #dbeafe;
 
-    color: white;
+    color: #1e40af;
 
 }
 
@@ -206,7 +206,7 @@ body {
 
     padding-top: 18px;
 
-    border-top: 1px solid rgba(255,255,255,.12);
+    border-top: 1px solid #e2e8f0;
 
     display: flex;
 
@@ -224,7 +224,7 @@ body {
 
     gap: 10px;
 
-    color: white;
+    color: var(--text);
 
     text-decoration: none;
 
@@ -238,9 +238,9 @@ body {
 
     border-radius: 50%;
 
-    background: #d6a83d;
+    background: #dbeafe;
 
-    color: var(--dark);
+    color: #1d4ed8;
 
     display: flex;
 
@@ -286,9 +286,9 @@ body {
 
     border-radius: 7px;
 
-    background: rgba(255,255,255,.07);
+    background: #eff6ff;
 
-    color: white;
+    color: var(--text);
 
     text-decoration: none;
 
@@ -370,9 +370,9 @@ body {
 
 .chip.active {
 
-    background: var(--dark);
+    background: #ffffff;
 
-    color: white;
+    color: var(--text);
 
     border-color: var(--dark);
 
@@ -411,7 +411,7 @@ body {
 
     border-radius: 50%;
 
-    background: #e9efec;
+    background: #dbeafe;
 
     color: var(--dark);
 
@@ -525,9 +525,9 @@ body {
 
 .status-pill.amber {
 
-    background: #fff5dc;
+    background: #dbeafe;
 
-    color: #9a7419;
+    color: #1e40af;
 
 }
 
@@ -542,9 +542,9 @@ body {
 
 .status-pill.brand {
 
-    background: #edf3f5;
+    background: #dbeafe;
 
-    color: #52717c;
+    color: #1e40af;
 
 }
 
@@ -559,9 +559,9 @@ body {
 
 .status-pill.teal {
 
-    background: #e7f2ed;
+    background: #dbeafe;
 
-    color: #39745f;
+    color: #1d4ed8;
 
 }
 
@@ -576,9 +576,9 @@ body {
 
 .status-pill.rose {
 
-    background: #f8e8eb;
+    background: #dbeafe;
 
-    color: #9e4758;
+    color: #1e40af;
 
 }
 
@@ -620,7 +620,7 @@ body {
 
     height: 2px;
 
-    background: #e5e9e7;
+    background: #dbeafe;
 
 }
 
@@ -644,7 +644,7 @@ body {
 
     border-radius: 50%;
 
-    background: #edf0ee;
+    background: #eaf0f8;
 
     color: var(--muted);
 
@@ -670,9 +670,9 @@ body {
 
 .step.current .step-dot {
 
-    background: var(--dark);
+    background: #ffffff;
 
-    color: white;
+    color: var(--text);
 
 }
 
@@ -701,7 +701,7 @@ body {
 
     gap: 8px;
 
-    border-top: 1px solid #edf0ee;
+    border-top: 1px solid #eaf0f8;
 
     padding-top: 16px;
 
@@ -711,9 +711,9 @@ body {
 
     border: none;
 
-    background: var(--dark);
+    background: #ffffff;
 
-    color: white;
+    color: var(--text);
 
     padding: 9px 15px;
 
@@ -729,9 +729,9 @@ body {
 
     border: none;
 
-    background: #f8e8eb;
+    background: #dbeafe;
 
-    color: #9e4758;
+    color: white;
 
     padding: 9px 15px;
 
@@ -749,7 +749,7 @@ body {
 
     margin-top: 8px;
 
-    color: #8b777b;
+    color: #64748b;
 
     font-size: 11px;
 
