@@ -28,12 +28,12 @@
 
             <div class="brand">
 
-                <a href="hr/dashboard.html">
+                <a href="index.html">
 
                     <div class="brand-mark"></div>
 
                     <div>
-                        <div class="brand-name">HRM</div>
+                        <div class="brand-name">Trellis</div>
                         <div class="brand-sub">Workforce OS</div>
                     </div>
 
@@ -50,27 +50,27 @@
                     WORKSPACE
                 </div>
 
-                <a href="hr/dashboard.html" class="nav-link">
+                <a href="index.html" class="nav-link">
                     <span class="nav-icon">▦</span>
                     Overview
                 </a>
 
-                <a href="hr/people.html" class="nav-link">
+                <a href="people.html" class="nav-link">
                     <span class="nav-icon">♙</span>
                     People
                 </a>
 
-                <a href="hr/attendance.html" class="nav-link">
+                <a href="hr-attendance.html" class="nav-link">
                     <span class="nav-icon">✓</span>
                     Attendance
                 </a>
 
-                <a href="hr/leave.html" class="nav-link">
+                <a href="hr-leave.html" class="nav-link">
                     <span class="nav-icon">✈</span>
                     Leave
                 </a>
 
-                <a href="hr/payroll.html" class="nav-link">
+                <a href="payroll.html" class="nav-link">
                     <span class="nav-icon">₹</span>
                     Payroll
                 </a>
@@ -86,12 +86,12 @@
                     ORGANIZATION
                 </div>
 
-                <a href="hr/department.html" class="nav-link">
+                <a href="departments.html" class="nav-link">
                     <span class="nav-icon">◇</span>
                     Departments
                 </a>
 
-                <a href="hr/settings.html" class="nav-link">
+                <a href="settings.html" class="nav-link">
                     <span class="nav-icon">⚙</span>
                     Settings
                 </a>
@@ -103,18 +103,18 @@
 
             <div class="sidebar-bottom">
 
-                <a href="hr/profile.html" class="sidebar-user">
+                <a href="hr-profile.html" class="sidebar-user">
 
-                    <div class="small-avatar">
+                    <div class="small-avatar" id="sidebar-avatar">
                         AV
                     </div>
 
                     <div>
-                        <div class="user-name">
+                        <div class="user-name" id="sidebar-name">
                             Ananya Verma
                         </div>
 
-                        <div class="user-role">
+                        <div class="user-role" id="sidebar-role">
                             HR Manager
                         </div>
                     </div>
@@ -151,8 +151,8 @@
 
                 </div>
 
-                <button class="edit-button">
-                    Edit Profile
+                <button class="edit-button" id="btn-edit-profile">
+                    ✎ &nbsp; Edit Profile
                 </button>
 
             </header>
@@ -161,21 +161,21 @@
 
             <section class="profile-card">
 
-                <div class="profile-avatar">
+                <div class="profile-avatar" id="profile-avatar" title="Click to customize profile avatar">
                     AV
                 </div>
 
                 <div class="profile-main-info">
 
-                    <h2>
+                    <h2 id="profile-name">
                         Ananya Verma
                     </h2>
 
-                    <h3>
+                    <h3 id="profile-role">
                         HR Manager
                     </h3>
 
-                    <p>
+                    <p id="profile-company">
                         People & Culture · Trellis Technologies Pvt. Ltd.
                     </p>
 
@@ -188,7 +188,7 @@
 
             <section class="stats">
 
-                <div class="stat-card">
+                <div class="stat-card" data-stat="employees" title="Click to view headcount breakdown">
 
                     <div class="stat-number">
                         124
@@ -201,7 +201,7 @@
                 </div>
 
 
-                <div class="stat-card">
+                <div class="stat-card" data-stat="requests" title="Click to view pending requests breakdown">
 
                     <div class="stat-number">
                         8
@@ -214,7 +214,7 @@
                 </div>
 
 
-                <div class="stat-card">
+                <div class="stat-card" data-stat="reviews" title="Click to view review cycle details">
 
                     <div class="stat-number">
                         3
@@ -227,7 +227,7 @@
                 </div>
 
 
-                <div class="stat-card">
+                <div class="stat-card" data-stat="tenure" title="Click to view career journey">
 
                     <div class="stat-number">
                         2.4 yrs
@@ -262,7 +262,7 @@
                             Email
                         </span>
 
-                        <span class="info-value">
+                        <span class="info-value" id="info-email">
                             ananya.verma@trellis.co
                         </span>
 
@@ -275,7 +275,7 @@
                             Phone
                         </span>
 
-                        <span class="info-value">
+                        <span class="info-value" id="info-phone">
                             +91 98765 12345
                         </span>
 
@@ -288,7 +288,7 @@
                             Location
                         </span>
 
-                        <span class="info-value">
+                        <span class="info-value" id="info-location">
                             Delhi NCR, India
                         </span>
 
@@ -301,7 +301,7 @@
                             Date of Birth
                         </span>
 
-                        <span class="info-value">
+                        <span class="info-value" id="info-dob">
                             14 February 1999
                         </span>
 
@@ -324,7 +324,7 @@
                             Employee ID
                         </span>
 
-                        <span class="info-value">
+                        <span class="info-value" id="info-empid">
                             TRL-HR-001
                         </span>
 
@@ -337,7 +337,7 @@
                             Department
                         </span>
 
-                        <span class="info-value">
+                        <span class="info-value" id="info-department">
                             People & Culture
                         </span>
 
@@ -350,7 +350,7 @@
                             Role
                         </span>
 
-                        <span class="info-value">
+                        <span class="info-value" id="info-role">
                             HR Manager
                         </span>
 
@@ -363,7 +363,7 @@
                             Joined
                         </span>
 
-                        <span class="info-value">
+                        <span class="info-value" id="info-joined">
                             March 2024
                         </span>
 
@@ -386,7 +386,7 @@
                 <div class="responsibility-grid">
 
 
-                    <div class="responsibility-card">
+                    <div class="responsibility-card" data-responsibility="employees" title="Manage employee records and onboarding">
 
                         <div class="responsibility-icon">
                             ♙
@@ -399,8 +399,7 @@
                             </h3>
 
                             <p>
-                                Manage employee records, onboarding and
-                                workforce information.
+                                Manage employee records, onboarding and workforce information.
                             </p>
 
                         </div>
@@ -408,7 +407,7 @@
                     </div>
 
 
-                    <div class="responsibility-card">
+                    <a href="hr-attendance.html" class="responsibility-card" title="Open Attendance Management page">
 
                         <div class="responsibility-icon">
                             ✓
@@ -417,20 +416,19 @@
                         <div>
 
                             <h3>
-                                Attendance
+                                Attendance &nbsp;↗
                             </h3>
 
                             <p>
-                                Review attendance records and resolve
-                                attendance issues.
+                                Review attendance records and resolve attendance issues.
                             </p>
 
                         </div>
 
-                    </div>
+                    </a>
 
 
-                    <div class="responsibility-card">
+                    <a href="hr-leave.html" class="responsibility-card" title="Open Leave Management page">
 
                         <div class="responsibility-icon">
                             ✈
@@ -439,7 +437,7 @@
                         <div>
 
                             <h3>
-                                Leave Management
+                                Leave Management &nbsp;↗
                             </h3>
 
                             <p>
@@ -448,10 +446,10 @@
 
                         </div>
 
-                    </div>
+                    </a>
 
 
-                    <div class="responsibility-card">
+                    <div class="responsibility-card" data-responsibility="payroll" title="Coordinate payroll processing">
 
                         <div class="responsibility-icon">
                             ₹
@@ -464,8 +462,7 @@
                             </h3>
 
                             <p>
-                                Coordinate payroll processing and employee
-                                compensation records.
+                                Coordinate payroll processing and employee compensation records.
                             </p>
 
                         </div>
@@ -481,15 +478,35 @@
 
             <section class="section">
 
-                <h2 class="section-title">
-                    Recent HR Activity
-                </h2>
+                <div class="activity-header-wrap">
+
+                    <h2 class="section-title">
+                        Recent HR Activity
+                    </h2>
+
+                    <div class="activity-actions-row">
+
+                        <div class="activity-filter-pills" id="activity-filter-pills">
+                            <button class="activity-pill active" data-filter="all">All</button>
+                            <button class="activity-pill" data-filter="leave">Leave</button>
+                            <button class="activity-pill" data-filter="employee">Employees</button>
+                            <button class="activity-pill" data-filter="payroll">Payroll</button>
+                            <button class="activity-pill" data-filter="attendance">Attendance</button>
+                        </div>
+
+                        <button class="btn-log-activity" id="btn-log-activity">
+                            + &nbsp; Log Activity
+                        </button>
+
+                    </div>
+
+                </div>
 
 
-                <div class="card activity-card">
+                <div class="card activity-card" id="activity-list">
 
 
-                    <div class="activity">
+                    <div class="activity" data-category="leave">
 
                         <div class="activity-dot green"></div>
 
@@ -500,16 +517,17 @@
                             </div>
 
                             <div class="activity-text">
-                                Approved leave request for
-                                <strong>Rahul Sharma</strong>
+                                Approved leave request for <strong>Rahul Sharma</strong>
                             </div>
 
                         </div>
 
+                        <button class="activity-delete-btn" title="Remove activity log">&times;</button>
+
                     </div>
 
 
-                    <div class="activity">
+                    <div class="activity" data-category="employee">
 
                         <div class="activity-dot yellow"></div>
 
@@ -520,16 +538,17 @@
                             </div>
 
                             <div class="activity-text">
-                                Added a new employee to the
-                                <strong>Engineering</strong> department
+                                Added a new employee to the <strong>Engineering</strong> department
                             </div>
 
                         </div>
 
+                        <button class="activity-delete-btn" title="Remove activity log">&times;</button>
+
                     </div>
 
 
-                    <div class="activity">
+                    <div class="activity" data-category="payroll">
 
                         <div class="activity-dot blue"></div>
 
@@ -545,10 +564,12 @@
 
                         </div>
 
+                        <button class="activity-delete-btn" title="Remove activity log">&times;</button>
+
                     </div>
 
 
-                    <div class="activity">
+                    <div class="activity" data-category="attendance">
 
                         <div class="activity-dot green"></div>
 
@@ -564,6 +585,8 @@
 
                         </div>
 
+                        <button class="activity-delete-btn" title="Remove activity log">&times;</button>
+
                     </div>
 
 
@@ -576,6 +599,120 @@
 
     </div>
 
+    <!-- EDIT PROFILE MODAL -->
+    <div class="modal-overlay" id="edit-profile-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3>Edit HR Profile</h3>
+                <button class="modal-close-btn" id="edit-modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <form id="edit-profile-form">
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="edit-name">Full Name</label>
+                            <input type="text" id="edit-name" class="form-input" value="Ananya Verma" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="edit-role">Role Title</label>
+                            <input type="text" id="edit-role" class="form-input" value="HR Manager" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="edit-dept">Department</label>
+                            <input type="text" id="edit-dept" class="form-input" value="People & Culture" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="edit-email">Email Address</label>
+                            <input type="email" id="edit-email" class="form-input" value="ananya.verma@trellis.co" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="edit-phone">Phone Number</label>
+                            <input type="tel" id="edit-phone" class="form-input" value="+91 98765 12345" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="edit-location">Location</label>
+                            <input type="text" id="edit-location" class="form-input" value="Delhi NCR, India" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="edit-dob">Date of Birth</label>
+                        <input type="text" id="edit-dob" class="form-input" value="14 February 1999" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Avatar Accent Theme</label>
+                        <div class="color-choice-row" id="avatar-color-choices">
+                            <div class="color-choice selected" data-color="#2563eb" style="background:#2563eb;" title="Royal Blue"></div>
+                            <div class="color-choice" data-color="#7c3aed" style="background:#7c3aed;" title="Purple"></div>
+                            <div class="color-choice" data-color="#059669" style="background:#059669;" title="Emerald"></div>
+                            <div class="color-choice" data-color="#e11d48" style="background:#e11d48;" title="Rose"></div>
+                            <div class="color-choice" data-color="#d97706" style="background:#d97706;" title="Amber"></div>
+                            <div class="color-choice" data-color="#0f172a" style="background:#0f172a;" title="Slate Navy"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-ghost" id="edit-modal-cancel">Cancel</button>
+                    <button type="submit" class="edit-button">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- STAT DRILLDOWN MODAL -->
+    <div class="modal-overlay" id="stat-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="stat-modal-title">Metric Breakdown</h3>
+                <button class="modal-close-btn" id="stat-modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="stat-modal-body">
+                <!-- Dynamically populated -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-ghost" id="stat-modal-dismiss">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOG ACTIVITY MODAL -->
+    <div class="modal-overlay" id="log-activity-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3>Log HR Activity</h3>
+                <button class="modal-close-btn" id="log-modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <form id="log-activity-form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="form-label" for="activity-category-select">Activity Domain</label>
+                        <select id="activity-category-select" class="form-select">
+                            <option value="leave">Leave Management</option>
+                            <option value="employee">Employee Management</option>
+                            <option value="attendance">Attendance</option>
+                            <option value="payroll">Payroll</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="activity-text-input">Activity Description</label>
+                        <textarea id="activity-text-input" class="form-textarea" rows="3" placeholder="Describe the action or milestone completed..." required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-ghost" id="log-modal-cancel">Cancel</button>
+                    <button type="submit" class="edit-button">Post to Feed</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST CONTAINER -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <script src="../../js/hr/profile.js"></script>
 </body>
 
 </html>
