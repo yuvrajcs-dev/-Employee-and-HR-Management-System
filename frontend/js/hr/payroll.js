@@ -24,9 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
         link.addEventListener("click", (event) => {
             event.preventDefault();
             const employeeName = link.closest(".table-row")?.querySelector(".employee")?.textContent.trim();
-            const target = new URL("../employee/e-payroll.html", window.location.href);
-            if (employeeName) target.searchParams.set("employee", employeeName);
-            window.location.href = target.href;
+            const safeName = employeeName ? encodeURIComponent(employeeName) : "";
+            window.location.href = "../employee/e-payroll.html" + (safeName ? "?employee=" + safeName : "");
         });
     });
 

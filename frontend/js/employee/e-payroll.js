@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // Load employee name from URL
-    const employeeName = new URLSearchParams(window.location.search).get("employee");
-    if (employeeName) {
+    const rawName = new URLSearchParams(window.location.search).get("employee");
+    if (rawName) {
+        const safeName = rawName.replace(/[<>"'&]/g, "");
         const employeeValue = document.querySelector(".employee-info .info-value");
-        if (employeeValue) employeeValue.textContent = employeeName;
+        if (employeeValue) employeeValue.textContent = safeName;
     }
 
     // Back button
