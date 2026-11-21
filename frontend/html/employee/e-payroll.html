@@ -26,7 +26,7 @@
 
     <aside class="sidebar">
 
-        <div class="brand">
+        <a href="../../html/main-dashboard.html" class="brand">
 
             <div class="brand-icon">
                 <i class="fa-solid fa-chart-simple"></i>
@@ -44,7 +44,7 @@
 
             </div>
 
-        </div>
+        </a>
 
         <div class="nav-section">
 
@@ -53,7 +53,7 @@
             </div>
 
 
-            <a href="portal.html" class="nav-item">
+            <a href="#" class="nav-item">
 
                 <span class="nav-icon">
                     <i class="fa-solid fa-table-cells-large"></i>
@@ -66,7 +66,7 @@
             </a>
 
 
-            <a href="profiledata.html" class="nav-item">
+            <a href="#" class="nav-item">
 
                 <span class="nav-icon">
                     <i class="fa-solid fa-users"></i>
@@ -79,7 +79,7 @@
             </a>
 
 
-            <a href="attendance.html" class="nav-item">
+            <a href="#" class="nav-item">
 
                 <span class="nav-icon">
                     <i class="fa-regular fa-calendar-check"></i>
@@ -92,7 +92,7 @@
             </a>
 
 
-            <a href="leave.html" class="nav-item">
+            <a href="#" class="nav-item">
 
                 <span class="nav-icon">
                     <i class="fa-solid fa-plane"></i>
@@ -105,7 +105,7 @@
             </a>
 
 
-            <a href="e-payroll.html" class="nav-item active">
+            <a href="#" class="nav-item active">
 
                 <span class="active-indicator"></span>
 
@@ -129,7 +129,7 @@
             </div>
 
 
-            <a href="portal.html" class="nav-item">
+            <a href="#" class="nav-item">
 
                 <span class="nav-icon">
                     <i class="fa-solid fa-sitemap"></i>
@@ -142,7 +142,7 @@
             </a>
 
 
-            <a href="settings.html" class="nav-item">
+            <a href="#" class="nav-item">
 
                 <span class="nav-icon">
                     <i class="fa-solid fa-gear"></i>
@@ -175,65 +175,35 @@
             </div>
 
 
-            <a href="../login.html" class="logout-btn" title="Log out" style="color:inherit;text-decoration:none;">
+            <button class="logout-btn">
 
                 <i class="fa-solid fa-arrow-right-from-bracket"></i>
 
-            </a>
+            </button>
 
         </div>
 
     </aside>
 
 
-    <div class="nav">
-        <div class="logo">
-            <h3>HRM</h3>
-        </div>
-
-        <div class="items">
-            <a href="portal.html" class="item">My workspace</a>
-            <a href="attendance.html" class="item">Attendance</a>
-            <a href="leave.html" class="item">Leave</a>
-            <a href="e-payroll.html" class="item active" aria-current="page">Payslips</a>
-        </div>
-
-        <div class="btn-with-profile">
-            <div class="notification">
-                <i class="fa-regular fa-bell" style="color: rgb(179, 179, 180);"></i>
-            </div>
-            <a href="profiledata.html" class="profile" style="color:inherit;text-decoration:none;">
-                <i class="fa-regular fa-user"></i>
-                <span class="status">
-                    <span class="ring"></span>
-                </span>
-            </a>
-        </div>
-    </div>
-
     <main class="main-content">
 
         <div class="top-bar">
 
-            <a href="portal.html" class="back-link">
-
+            <a href="#" class="back-link">
                 <i class="fa-solid fa-arrow-left"></i>
-
-                <span>
-                    Back
-                </span>
-
+                <span>Back</span>
             </a>
 
+            <div class="payslip-month-selector">
+                <button class="month-nav" id="prevMonth"><i class="fa-solid fa-chevron-left"></i></button>
+                <span class="month-display">August 2026</span>
+                <button class="month-nav" id="nextMonth"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
 
             <button class="print-btn">
-
                 <i class="fa-solid fa-print"></i>
-
-                <span>
-                    Print / Save as PDF
-                </span>
-
+                <span>Print / Save as PDF</span>
             </button>
 
         </div>
