@@ -27,9 +27,11 @@ body {
     position: relative;
     width: 50%;
     height:100vh;
-    background: linear-gradient(to bottom,rgb(40, 51, 94) 0%,rgb(50, 64, 122) 50%,rgb(56, 71, 133) 100%);
+    background: w;
     color: white;
     overflow: hidden;
+    background: linear-gradient(to bottom,rgb(40, 51, 94) 0%,rgb(50, 64, 122) 50%,rgb(56, 71, 133) 100%);
+
 }
 .circle-top-left{
     position: absolute;
