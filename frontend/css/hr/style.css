@@ -151,6 +151,20 @@ body {
   padding: 0 1rem;
 }
 
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-navy);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--primary-blue);
+}
+
 .page-header {
   margin-bottom: 1.5rem;
 }
