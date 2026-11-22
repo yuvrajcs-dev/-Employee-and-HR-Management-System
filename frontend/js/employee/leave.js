@@ -45,10 +45,26 @@ function createRequestCard(type, start, end, days) {
     dates.textContent = `${formatDate(start)}–${formatDate(end)} · ${days} ${days === 1 ? "day" : "days"}`;
     summary.append(title, dates);
 
+    const progress = document.createElement("div");
+    progress.className = "leave-status-bar";
+    progress.innerHTML = `
+        <div class="status-step completed">
+            <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+            <span>Submitted</span>
+        </div>
+        <div class="status-step completed">
+            <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+            <span>Manager review</span>
+        </div>
+        <div class="status-step active">
+            <div class="step-circle">3</div>
+            <span>Confirmed</span>
+        </div>`;
+
     const status = document.createElement("div");
     status.className = "leave-status awaited";
     status.textContent = "Awaited";
-    card.append(summary, status);
+    card.append(summary, progress, status);
     return card;
 }
 
