@@ -1,0 +1,208 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css");
+/* Shared visual foundation for every HR workspace page. */
+:root {
+  --hr-page: #eef0f4;
+  --hr-surface: #ffffff;
+  --hr-ink: #161a22;
+  --hr-muted: #747d8f;
+  --hr-border: #dbe0e8;
+  --hr-accent: #40518f;
+  --hr-accent-soft: #eef0f8;
+}
+
+body {
+  background-color: var(--hr-page);
+  color: var(--hr-ink);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .page-title {
+  color: var(--hr-ink);
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 500;
+}
+
+a { color: inherit; }
+
+/* One shared HRM wordmark and mark across every HR sidebar. */
+.brand-mark, .brand-icon {
+  position: relative;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: linear-gradient(155deg, #4a5a9e 0%, #33427e 100%);
+}
+
+.brand-mark::before, .brand-icon::before {
+  position: absolute;
+  inset: 7px;
+  border-bottom: 2px solid rgba(255, 255, 255, .9);
+  border-left: 2px solid rgba(255, 255, 255, .9);
+  content: "";
+}
+
+.brand-mark::after, .brand-icon::after {
+  position: absolute;
+  top: 5px;
+  left: 9px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #fff;
+  content: "";
+}
+
+.brand-icon i { display: none; }
+.brand-name { font-family: Fraunces, Georgia, serif; font-size: 1.2rem; font-weight: 600; line-height: 1; }
+.brand-sub, .brand-subtitle { margin-top: 2px; color: #8b93a3; font-size: .68rem; line-height: 1.3; }
+
+/* Normalize sidebar geometry and navigation across all HR page templates. */
+.shell > .sidebar, .layout > .sidebar, .app > .sidebar {
+  box-sizing: border-box;
+  width: 252px;
+  min-width: 252px;
+  padding: 28px 18px;
+  border-right: 1px solid var(--hr-border);
+}
+
+.shell > .sidebar .brand,
+.layout > .sidebar .brand {
+  margin: 0 0 26px;
+  padding: 0 8px;
+}
+
+.shell > .sidebar .brand > a,
+.layout > .sidebar .brand > a,
+.shell > .sidebar .brand-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-group, .navigation, .nav-section { margin: 0 0 22px; }
+.nav-label, .nav-title {
+  margin: 0 10px 8px;
+  padding: 0;
+  color: #8b93a3;
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+}
+
+.sidebar .nav-item, .sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 38px;
+  height: auto;
+  margin: 0 0 2px;
+  padding: 9px 10px;
+  border-radius: 9px;
+  color: #565d6d;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: .89rem;
+  font-weight: 400;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.sidebar .nav-item.active, .sidebar .nav-link.active {
+  background: var(--hr-accent-soft);
+  color: var(--hr-accent);
+  font-weight: 600;
+}
+
+.sidebar .nav-icon {
+  display: inline-flex;
+  width: 18px;
+  min-width: 18px;
+  height: 18px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: inherit;
+  font-size: .95rem;
+  line-height: 1;
+}
+
+.sidebar .nav-icon i { font-size: .95rem; }
+
+/* Shared sidebar colors, regardless of the page's original markup. */
+.sidebar, aside.sidebar {
+  background-color: var(--hr-surface);
+  border-color: var(--hr-border);
+}
+
+.nav-item.active, .nav-link.active {
+  background-color: var(--hr-accent-soft);
+  color: var(--hr-accent);
+}
+
+.nav-item:hover, .nav-link:hover {
+  color: var(--hr-accent);
+}
+
+.card, .panel {
+  background-color: var(--hr-surface);
+  border-color: var(--hr-border);
+}
+
+/* Payroll used a larger type scale than the rest of the HR workspace. */
+.app .nav-title { font-size: .68rem; }
+.app .nav-item { font-size: .89rem; }
+.app .sidebar { width: 252px; }
+.app > .sidebar > .brand {
+  height: auto;
+  align-items: center;
+  padding: 22px 18px 26px;
+}
+.app .nav-section { padding: 0 18px; }
+.app .nav-title { margin: 0 10px 8px; }
+.app .nav-item {
+  height: auto;
+  min-height: 38px;
+  padding: 9px 10px;
+  margin-bottom: 2px;
+  border-radius: 9px;
+}
+.app .brand-name { font-family: Fraunces, Georgia, serif; font-size: 1.2rem; font-weight: 600; }
+.app .brand-subtitle { font-size: .68rem; }
+.app .profile-name { font-size: .84rem; }
+.app .profile-role { font-size: .72rem; }
+.app .profile {
+  margin-left: 15px;
+  margin-right: 0;
+  padding-right: 0;
+}
+.main-content {
+  width: calc(100% - 252px);
+  margin-left: 252px;
+  padding: 34px 40px 60px;
+  font-size: .9rem;
+}
+.main-content .page-header h1 {
+  font-family: Fraunces, Georgia, serif;
+  font-size: 1.7rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -.01em;
+}
+.main-content .page-header p { font-size: .95rem; }
+.main-content .approve-btn,
+.main-content .table-row,
+.main-content .department-amount { font-size: .9rem; }
+.main-content .records-section h2 {
+  font-family: Fraunces, Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
