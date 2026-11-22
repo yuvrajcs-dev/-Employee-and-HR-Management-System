@@ -1047,3 +1047,54 @@ a {
     .records-top { flex-direction: column; align-items: flex-start; }
     .search-bar { width: 100%; }
 }
+
+
+/* =========================================
+   ROW ACTIONS (individual approve / reject)
+========================================= */
+
+.row-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.approve-row-btn,
+.reject-row-btn {
+    height: 32px;
+    padding: 0 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.18s ease;
+}
+
+.approve-row-btn {
+    background: #e1f2ed;
+    color: #15967d;
+}
+
+.approve-row-btn:hover {
+    background: #c5e8e0;
+}
+
+.reject-row-btn {
+    background: #fbe7ea;
+    color: #df4654;
+}
+
+.reject-row-btn:hover {
+    background: #f5cdd1;
+}
+
+
+/* =========================================
+   REJECTED STATUS
+========================================= */
+
+.status.rejected {
+    background: #f1e0e2;
+    color: #a0303b;
+}

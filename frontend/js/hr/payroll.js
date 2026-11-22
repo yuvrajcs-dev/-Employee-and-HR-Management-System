@@ -1,22 +1,72 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Approve all
-    const approveButton = document.querySelector(".approve-btn");
+    // Pending count helper
     const pendingCount = document.querySelector(".pending-count");
 
+    function countPending() {
+        return document.querySelectorAll(".status.processing, .status.pending").length;
+    }
+
+    function updatePendingCount() {
+        const n = countPending();
+        if (pendingCount) pendingCount.textContent = n === 0 ? "All records settled" : `${n} record${n > 1 ? "s" : ""} pending`;
+    }
+
+    // Approve a single row
+    function approveRow(row) {
+        const statusEl = row.querySelector(".status.processing, .status.pending");
+        if (!statusEl) return;
+        statusEl.className = "status paid";
+        statusEl.textContent = "Paid";
+        const actionsEl = row.querySelector(".row-actions");
+        if (actionsEl) {
+            actionsEl.innerHTML = '<a href="#" class="view-slip">View slip</a>';
+            // re-bind view-slip for this new link
+            actionsEl.querySelector(".view-slip").addEventListener("click", (e) => {
+                e.preventDefault();
+                const name = row.querySelector(".employee")?.textContent.trim();
+                window.location.href = "../employee/e-payroll.html" + (name ? "?employee=" + encodeURIComponent(name) : "");
+            });
+        }
+        updatePendingCount();
+    }
+
+    // Reject a single row
+    function rejectRow(row) {
+        const name = row.querySelector(".employee")?.textContent.trim() || "this employee";
+        if (!window.confirm(`Reject payroll for ${name}?`)) return;
+        const statusEl = row.querySelector(".status.processing, .status.pending");
+        if (statusEl) {
+            statusEl.className = "status rejected";
+            statusEl.textContent = "Rejected";
+        }
+        const actionsEl = row.querySelector(".row-actions");
+        if (actionsEl) actionsEl.innerHTML = "";
+        updatePendingCount();
+        showToast(`Payroll rejected for ${name}.`, "error");
+    }
+
+    // Individual row button clicks (delegated)
+    document.querySelector(".records-card")?.addEventListener("click", (e) => {
+        const row = e.target.closest(".table-row");
+        if (!row) return;
+        if (e.target.classList.contains("approve-row-btn")) approveRow(row);
+        if (e.target.classList.contains("reject-row-btn")) rejectRow(row);
+    });
+
+    // Approve all
+    const approveButton = document.querySelector(".approve-btn");
+
     approveButton?.addEventListener("click", () => {
-        document.querySelectorAll(".status.processing, .status.pending").forEach((status) => {
-            status.className = "status paid";
-            status.textContent = "Paid";
+        const pending = document.querySelectorAll(".status.processing, .status.pending");
+        if (pending.length === 0) { showToast("No pending records to approve."); return; }
+        pending.forEach((statusEl) => {
+            const row = statusEl.closest(".table-row");
+            if (row) approveRow(row);
         });
-        document.querySelectorAll(".pending-text").forEach((label) => {
-            label.textContent = "Approved";
-            label.classList.add("approved");
-        });
-        if (pendingCount) pendingCount.textContent = "0 records pending";
         approveButton.innerHTML = '<i class="fa-solid fa-circle-check"></i><span>Approved</span>';
         approveButton.disabled = true;
-        showToast("All payroll records approved successfully.");
+        showToast("All pending payroll records approved.");
     });
 
     // View slip navigation
@@ -24,9 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
         link.addEventListener("click", (event) => {
             event.preventDefault();
             const employeeName = link.closest(".table-row")?.querySelector(".employee")?.textContent.trim();
-            const target = new URL("../employee/e-payroll.html", window.location.href);
-            if (employeeName) target.searchParams.set("employee", employeeName);
-            window.location.href = target.href;
+            const safeName = employeeName ? encodeURIComponent(employeeName) : "";
+            window.location.href = "../employee/e-payroll.html" + (safeName ? "?employee=" + safeName : "");
         });
     });
 
@@ -95,10 +144,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Toast helper
-    function showToast(message) {
+    function showToast(message, type = "success") {
         const toast = document.createElement("div");
         toast.className = "toast";
-        toast.innerHTML = `<i class="fa-solid fa-circle-check"></i> ${message}`;
+        const icon = type === "error" ? "fa-circle-xmark" : "fa-circle-check";
+        toast.innerHTML = `<i class="fa-solid ${icon}"></i> ${message}`;
         document.body.appendChild(toast);
         requestAnimationFrame(() => toast.classList.add("toast-show"));
         setTimeout(() => {
@@ -106,4 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => toast.remove(), 400);
         }, 3000);
     }
+
+    updatePendingCount();
 });
