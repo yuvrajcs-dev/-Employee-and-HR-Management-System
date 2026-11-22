@@ -64,8 +64,17 @@
         <p>Here's how the organization is doing today — Tuesday, 1 September.</p>
       </div>
       <div class="head-tools">
-        <div class="search-box"><i class="bi bi-search"></i> Search people…</div>
-        <div class="icon-btn"><i class="bi bi-bell"></i><span class="dot"></span></div>
+        <div class="search-box" id="search-btn"><i class="bi bi-search"></i> Search people…</div>
+        <div style="position:relative;">
+          <div class="icon-btn" id="bell-btn"><i class="bi bi-bell"></i><span class="dot" id="bell-dot"></span></div>
+          <div class="notif-box" id="notif-box">
+            <div class="notif-title">Notifications</div>
+            <div class="notif-item"><b>Priya Nair</b> submitted a leave request</div>
+            <div class="notif-item"><b>4 leave requests</b> are waiting for review</div>
+            <div class="notif-item"><b>2 employees</b> are absent without a reason</div>
+            <div class="notif-item">Payroll for <b>August</b> was processed</div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -222,5 +231,15 @@
   </main>
 </div>
 
+<div class="modal-bg" id="search-modal">
+  <div class="modal-box">
+    <input type="text" id="search-input" placeholder="Type a name, role or department…">
+    <div id="search-results"></div>
+    <button class="modal-close" id="search-close">Close</button>
+  </div>
+</div>
+
+<script src="../../js/hr/employees.js"></script>
+<script src="../../js/hr/dashboard.js"></script>
 </body>
 </html>

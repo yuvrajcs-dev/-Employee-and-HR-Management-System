@@ -65,17 +65,17 @@
         <p style="color:var(--ink-soft);font-size:.9rem;margin:0;">248 employees across 4 departments</p>
       </div>
       <div style="display:flex;gap:10px;">
-        <div class="search-box" style="width:220px;"><i class="bi bi-search"></i> Search people…</div>
+        <div class="search-box" style="width:220px;"><i class="bi bi-search"></i><input type="text" id="people-search" placeholder="Search people…"></div>
         <a class="btn-primary" href="add-employee.html"><i class="bi bi-plus-lg"></i> Add employee</a>
       </div>
     </div>
 
     <div class="chip-row" style="margin-bottom:22px;">
-      <div class="chip active">All departments</div>
-      <div class="chip">IT</div>
-      <div class="chip">Marketing</div>
-      <div class="chip">Finance</div>
-      <div class="chip">HR</div>
+      <div class="chip active" data-dept="All">All departments</div>
+      <div class="chip" data-dept="IT">IT</div>
+      <div class="chip" data-dept="Marketing">Marketing</div>
+      <div class="chip" data-dept="Finance">Finance</div>
+      <div class="chip" data-dept="HR">HR</div>
     </div>
 
     <div class="people-grid" id="people-grid"></div>
