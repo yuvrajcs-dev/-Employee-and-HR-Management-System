@@ -170,5 +170,4 @@ deptTable.addEventListener("click", function(event) {
 
 // 8. Run When Page Loads
 updateOverview();
-
 console.log("Trellis Department Management Loaded Successfully");

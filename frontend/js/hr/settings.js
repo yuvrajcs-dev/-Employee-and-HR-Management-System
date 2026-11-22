@@ -196,5 +196,4 @@ holidayTable.addEventListener("click", function(event) {
 
 // 11. Initial Page Load
 updateHolidayStats();
-
 console.log("Trellis HR Settings Loaded Successfully");
