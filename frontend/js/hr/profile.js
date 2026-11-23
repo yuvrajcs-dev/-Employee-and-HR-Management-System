@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:12px; margin-bottom:10px;">
                     <div style="display:flex; justify-content:space-between; align-items:center;">
                         <strong>Leave Requests (2 pending)</strong>
-                        <a href="hr-leave.html" style="font-size:12px; color:#2563eb; text-decoration:none; font-weight:600;">Review in Leave &rarr;</a>
+                        <a href="leave.html" style="font-size:12px; color:#2563eb; text-decoration:none; font-weight:600;">Review in Leave &rarr;</a>
                     </div>
                     <p style="font-size:11px; color:#64748b; margin-top:4px;">Priya Nair (Sick leave, 2 days), Karan Mehta (Casual leave, 1 day)</p>
                 </div>
