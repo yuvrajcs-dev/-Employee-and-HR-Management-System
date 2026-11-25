@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trellis — Attendance</title>
+
+    <link rel="stylesheet" href="../../css/hr/hr-attendance.css">
+  <link rel="stylesheet" href="../../css/hr/hr-theme.css">
+</head>
+
+<body>
+
+<div class="shell">
+
+    
+    <aside class="sidebar">
+
+        <div class="brand">
+            <a href="dashboard.html" class="brand-link">
+
+                <div class="brand-mark"></div>
+
+                <div>
+                    <div class="brand-name">HRM</div>
+                    <div class="brand-sub">Workforce OS</div>
+                </div>
+
+            </a>
+        </div>
+
+
+        <nav class="nav-group">
+
+            <div class="nav-label">Workspace</div>
+
+            <a class="nav-item" href="dashboard.html">
+                <span class="nav-icon"><i class="bi bi-grid-1x2" aria-hidden="true"></i></span>
+                Overview
+            </a>
+
+            <a class="nav-item" href="people.html">
+                <span class="nav-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
+                People
+            </a>
+
+            <a class="nav-item active" href="attendance.html">
+                <span class="nav-icon"><i class="bi bi-calendar-check" aria-hidden="true"></i></span>
+                Attendance
+            </a>
+
+            <a class="nav-item" href="leave.html">
+                <span class="nav-icon"><i class="bi bi-airplane" aria-hidden="true"></i></span>
+                Leave
+            </a>
+
+            <a class="nav-item" href="payroll.html">
+                <span class="nav-icon"><i class="bi bi-wallet2" aria-hidden="true"></i></span>
+                Payroll
+            </a>
+
+        </nav>
+
+
+        <nav class="nav-group">
+
+            <div class="nav-label">Organization</div>
+
+            <a class="nav-item" href="departmnts.html">
+                <span class="nav-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></span>
+                Departments
+            </a>
+
+            <a class="nav-item" href="settings.html">
+                <span class="nav-icon"><i class="bi bi-gear" aria-hidden="true"></i></span>
+                Settings
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-foot">
+
+            <a href="profile.html" class="profile-link">
+
+                <div class="avatar-sm">AV</div>
+
+                <div>
+                    <div class="foot-name">Ananya Verma</div>
+                    <div class="foot-role">HR Manager</div>
+                </div>
+
+            </a>
+
+            <a href="../login.html" class="logout-btn">
+                → 
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    
+    <main class="main">
+
+        <!-- HEADER -->
+
+        <div class="toolbar">
+
+            <div>
+                <h1>Attendance</h1>
+
+                <p>
+                    Organization-wide presence, <span id="current-month-display">September 2026</span>
+                </p>
+            </div>
+
+            <div class="toolbar-actions">
+                <button class="btn-ghost" id="export-btn">
+                    ↓ &nbsp; Export report
+                </button>
+                <button class="btn-primary" id="btn-quick-checkin">
+                    + &nbsp; Record check-in
+                </button>
+            </div>
+
+        </div>
+
+
+       
+
+        <div class="chip-row">
+
+            <div class="chip active">
+                ▣ &nbsp; Organization
+            </div>
+
+            <div class="chip">
+                ♙ &nbsp; Individual employee
+            </div>
+
+        </div>
+
+
+        
+
+        <div class="cal-wrap">
+
+            <!-- CALENDAR PANEL -->
+
+            <div class="panel">
+
+                <div class="panel-header-row">
+                    <div>
+                        <div class="panel-title">
+                            Daily attendance rate
+                        </div>
+
+                        <div class="panel-sub">
+                            Each day is shaded by what share of the organization
+                            checked in.
+                        </div>
+                    </div>
+
+                    <div class="month-selector">
+                        <button class="month-nav-btn" id="prev-month-btn" title="Previous month" aria-label="Previous month">‹</button>
+                        <span class="month-title" id="month-title">September 2026</span>
+                        <button class="month-nav-btn" id="next-month-btn" title="Next month" aria-label="Next month">›</button>
+                    </div>
+                </div>
+
+
+               
+
+                <div class="cal-head-row">
+
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                    <div>Sun</div>
+
+                </div>
+
+
+               
+
+                <div class="cal-grid">
+
+                    <div class="cal-cell empty"></div>
+
+                    <div class="cal-cell rate-mid">1</div>
+                    <div class="cal-cell rate-high">2</div>
+                    <div class="cal-cell rate-mid">3</div>
+                    <div class="cal-cell rate-good">4</div>
+
+                    <div class="cal-cell weekend">5</div>
+                    <div class="cal-cell weekend">6</div>
+
+                    <div class="cal-cell rate-good">7</div>
+                    <div class="cal-cell rate-mid">8</div>
+                    <div class="cal-cell rate-mid">9</div>
+                    <div class="cal-cell rate-high">10</div>
+                    <div class="cal-cell rate-good">11</div>
+
+                    <div class="cal-cell weekend">12</div>
+                    <div class="cal-cell weekend">13</div>
+
+                    <div class="cal-cell rate-low">14</div>
+                    <div class="cal-cell rate-low">15</div>
+                    <div class="cal-cell rate-low">16</div>
+                    <div class="cal-cell rate-mid">17</div>
+                    <div class="cal-cell rate-good">18</div>
+
+                    <div class="cal-cell weekend">19</div>
+                    <div class="cal-cell weekend">20</div>
+
+                    <div class="cal-cell rate-good">21</div>
+                    <div class="cal-cell rate-good">22</div>
+                    <div class="cal-cell rate-mid">23</div>
+                    <div class="cal-cell rate-good">24</div>
+                    <div class="cal-cell rate-good">25</div>
+
+                    <div class="cal-cell weekend">26</div>
+                    <div class="cal-cell weekend">27</div>
+
+                    <div class="cal-cell rate-low">28</div>
+                    <div class="cal-cell rate-low">29</div>
+                    <div class="cal-cell rate-low">30</div>
+
+                    <div class="cal-cell empty"></div>
+                    <div class="cal-cell empty"></div>
+                    <div class="cal-cell empty"></div>
+                    <div class="cal-cell empty"></div>
+
+                </div>
+
+
+               
+
+                <div class="cal-legend">
+
+                    <div class="cal-legend-item">
+                        <span class="legend low"></span>
+                        Below 88% · needs attention
+                    </div>
+
+                    <div class="cal-legend-item">
+                        <span class="legend mid"></span>
+                        88–93% · fair
+                    </div>
+
+                    <div class="cal-legend-item">
+                        <span class="legend good"></span>
+                        93–97% · good
+                    </div>
+
+                    <div class="cal-legend-item">
+                        <span class="legend high"></span>
+                        97%+ · excellent
+                    </div>
+
+                    <div class="cal-legend-item">
+                        <span class="legend weekend"></span>
+                        Weekend
+                    </div>
+
+                </div>
+
+
+               
+
+                <div class="cal-detail">
+
+                    <div class="cal-detail-empty">
+
+                        📊
+
+                        Attendance data is shown for
+                        September 2026.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+           
+
+            <div class="panel">
+
+                <div class="panel-title">
+                    This month
+                </div>
+
+
+                <div class="stat-block">
+
+                    <div class="stat-block-num">
+                        92.4%
+                    </div>
+
+                    <div class="stat-block-label">
+                        Overall attendance rate
+                    </div>
+
+                </div>
+
+
+                <div class="stat-block">
+
+                    <div class="stat-block-num">
+                        9:14 AM
+                    </div>
+
+                    <div class="stat-block-label">
+                        Average check-in time
+                    </div>
+
+                </div>
+
+
+                <div class="stat-block">
+
+                    <div class="stat-block-num">
+                        14
+                    </div>
+
+                    <div class="stat-block-label">
+                        Late arrivals this month
+                    </div>
+
+                </div>
+
+
+                <div class="stat-block">
+
+                    <div class="stat-block-num">
+                        6
+                    </div>
+
+                    <div class="stat-block-label">
+                        Unplanned absences
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+       
+
+        <div class="section-heading-row">
+            <div class="section-heading">
+                Today's check-ins
+                <span class="live-indicator" id="live-count-badge">5 employees</span>
+            </div>
+            <div class="table-search-wrap">
+                <input type="text" id="table-search-input" class="search-input" placeholder="Search employee or department...">
+            </div>
+        </div>
+
+        <div class="filter-pills" id="attendance-filter-pills">
+            <button class="filter-pill active" data-status="all">All <span class="pill-count" id="count-all">5</span></button>
+            <button class="filter-pill" data-status="Present">Present <span class="pill-count" id="count-present">2</span></button>
+            <button class="filter-pill" data-status="Late">Late <span class="pill-count" id="count-late">1</span></button>
+            <button class="filter-pill" data-status="Absent">Absent <span class="pill-count" id="count-absent">1</span></button>
+            <button class="filter-pill" data-status="On leave">On leave <span class="pill-count" id="count-leave">1</span></button>
+        </div>
+
+
+        <div class="panel table-panel">
+
+            <table class="data-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Employee</th>
+                        <th>Department</th>
+                        <th>Check-in</th>
+                        <th>Check-out</th>
+                        <th>Status</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="attendance-table-body">
+
+                    <tr data-emp="Rahul Sharma" data-dept="IT" data-status="Present">
+
+                        <td>Rahul Sharma</td>
+                        <td>IT</td>
+                        <td class="check-in-cell">09:02 AM</td>
+                        <td class="check-out-cell">—</td>
+
+                        <td>
+                            <span class="status-pill pill-teal">
+                                <span class="sq"></span>
+                                Present
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="btn-table-action check-out-btn" title="Record Check-out">Check out</button>
+                        </td>
+
+                    </tr>
+
+
+                    <tr data-emp="Priya Nair" data-dept="IT" data-status="Late">
+
+                        <td>Priya Nair</td>
+                        <td>IT</td>
+                        <td class="check-in-cell">09:41 AM</td>
+                        <td class="check-out-cell">—</td>
+
+                        <td>
+                            <span class="status-pill pill-amber">
+                                <span class="sq"></span>
+                                Late
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="btn-table-action check-out-btn" title="Record Check-out">Check out</button>
+                        </td>
+
+                    </tr>
+
+
+                    <tr data-emp="Sana Iqbal" data-dept="Marketing" data-status="Present">
+
+                        <td>Sana Iqbal</td>
+                        <td>Marketing</td>
+                        <td class="check-in-cell">08:57 AM</td>
+                        <td class="check-out-cell">—</td>
+
+                        <td>
+                            <span class="status-pill pill-teal">
+                                <span class="sq"></span>
+                                Present
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="btn-table-action check-out-btn" title="Record Check-out">Check out</button>
+                        </td>
+
+                    </tr>
+
+
+                    <tr data-emp="Farhan Ali" data-dept="Finance" data-status="Absent">
+
+                        <td>Farhan Ali</td>
+                        <td>Finance</td>
+                        <td class="check-in-cell">—</td>
+                        <td class="check-out-cell">—</td>
+
+                        <td>
+                            <span class="status-pill pill-rose">
+                                <span class="sq"></span>
+                                Absent
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="btn-table-action mark-present-btn" title="Mark Present">Mark Present</button>
+                        </td>
+
+                    </tr>
+
+
+                    <tr data-emp="Neha Gupta" data-dept="HR" data-status="On leave">
+
+                        <td>Neha Gupta</td>
+                        <td>HR</td>
+                        <td class="check-in-cell">—</td>
+                        <td class="check-out-cell">—</td>
+
+                        <td>
+                            <span class="status-pill pill-brand">
+                                <span class="sq"></span>
+                                On leave
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="btn-table-action disabled" disabled title="Employee is on approved leave">Excused</button>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- QUICK RECORD CHECK-IN MODAL -->
+<div class="modal-overlay" id="checkin-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h3>Record Employee Check-in</h3>
+            <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+        </div>
+        <form id="checkin-form">
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label" for="input-emp-name">Employee Name</label>
+                    <input type="text" id="input-emp-name" class="form-input" placeholder="e.g. Rahul Sharma" required list="common-employees">
+                    <datalist id="common-employees">
+                        <option value="Rahul Sharma">
+                        <option value="Priya Nair">
+                        <option value="Sana Iqbal">
+                        <option value="Farhan Ali">
+                        <option value="Neha Gupta">
+                        <option value="Karan Mehta">
+                        <option value="Vikram Singh">
+                        <option value="Aditi Rao">
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="input-emp-dept">Department</label>
+                    <select id="input-emp-dept" class="form-select" required>
+                        <option value="IT">IT</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Finance">Finance</option>
+                        <option value="HR">HR</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Operations">Operations</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="input-checkin-time">Check-in Time</label>
+                        <input type="text" id="input-checkin-time" class="form-input" placeholder="09:00 AM" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="input-checkout-time">Check-out Time</label>
+                        <input type="text" id="input-checkout-time" class="form-input" placeholder="— (Optional)">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="input-emp-status">Attendance Status</label>
+                    <select id="input-emp-status" class="form-select">
+                        <option value="Present">Present</option>
+                        <option value="Late">Late</option>
+                        <option value="Absent">Absent</option>
+                        <option value="On leave">On leave</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-ghost" id="modal-cancel-btn">Cancel</button>
+                <button type="submit" class="btn-primary">Save Attendance</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- TOAST CONTAINER -->
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+<script src="../../js/hr/attendance.js"></script>
+</body>
+</html>

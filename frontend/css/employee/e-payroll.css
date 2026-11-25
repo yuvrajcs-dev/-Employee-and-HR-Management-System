@@ -1,0 +1,562 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", Arial, sans-serif;
+    background: #f0f2f7;
+    color: #151a27;
+}
+
+button {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================
+   APP
+========================================= */
+
+.app {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 38px 48px 50px;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.top-bar {
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+
+.back-link {
+    color: #4b5e79;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+
+.back-link i {
+    font-size: 14px;
+}
+
+
+.back-link:hover {
+    color: #293d82;
+}
+
+
+/* =========================================
+   PRINT BUTTON
+========================================= */
+
+.print-btn {
+    height: 46px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #394c91;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.print-btn:hover {
+    background: #30427f;
+}
+
+
+.print-btn i {
+    font-size: 15px;
+}
+
+
+/* =========================================
+   PAYSLIP CARD
+========================================= */
+
+.payslip-card {
+    background: white;
+
+    border: 1px solid #dce1ea;
+
+    border-radius: 19px;
+
+    padding: 40px 38px 32px;
+
+    min-height: 745px;
+}
+
+
+/* =========================================
+   PAYSLIP LOGO
+========================================= */
+
+.payslip-logo {
+    width: 38px;
+    height: 38px;
+
+    background: #394c91;
+
+    color: white;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 155px;
+}
+
+
+.payslip-logo i {
+    font-size: 17px;
+}
+
+
+/* =========================================
+   EMPLOYEE INFORMATION
+========================================= */
+
+.employee-info {
+    display: grid;
+
+    grid-template-columns:
+        1.1fr
+        1.1fr
+        1.1fr
+        1.2fr;
+
+    column-gap: 50px;
+
+    margin-bottom: 32px;
+}
+
+
+.info-label {
+    color: #8090a8;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.6px;
+
+    margin-bottom: 6px;
+}
+
+
+.info-value {
+    color: #111823;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   PAY DETAILS
+========================================= */
+
+.pay-details {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 28px;
+}
+
+
+.section-title {
+    color: #8090a8;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   PAY ROW
+========================================= */
+
+.pay-row {
+    height: 47px;
+
+    border-bottom: 1px solid #d9dfe7;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    font-size: 16px;
+
+    color: #111823;
+}
+
+
+.pay-row strong {
+    font-weight: 700;
+}
+
+
+.pay-row.total-row {
+    border-bottom: none;
+
+    height: 50px;
+
+    padding-top: 4px;
+}
+
+
+/* =========================================
+   NET PAY
+========================================= */
+
+.net-pay-box {
+    margin-top: 29px;
+
+    min-height: 81px;
+
+    border-radius: 14px;
+
+    background: #dff1ec;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 23px;
+}
+
+
+.net-pay-title {
+    color: #138a79;
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+
+.net-pay-amount {
+    color: #14927d;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 29px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.action-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    margin-top: 24px;
+}
+
+
+.secondary-btn {
+    height: 46px;
+
+    padding: 0 17px;
+
+    background: white;
+
+    border: 1px solid #d7deea;
+
+    border-radius: 11px;
+
+    color: #465c78;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.secondary-btn:hover {
+    background: #f7f8fa;
+
+    border-color: #c8d0dd;
+}
+
+
+.secondary-btn i {
+    color: #526b89;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .main-content {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .payslip-logo {
+        margin-bottom: 120px;
+    }
+
+    .employee-info {
+        column-gap: 25px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .payslip-logo {
+        margin-bottom: 90px;
+    }
+
+    .employee-info {
+        grid-template-columns: 1fr 1fr;
+
+        row-gap: 25px;
+    }
+
+    .pay-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .main-content {
+        padding: 25px 16px 40px;
+    }
+
+    .top-bar {
+        margin-bottom: 18px;
+    }
+
+    .print-btn {
+        padding: 0 14px;
+    }
+
+    .print-btn span {
+        display: none;
+    }
+
+    .payslip-card {
+        padding: 25px 20px 25px;
+
+        border-radius: 15px;
+    }
+
+    .payslip-logo {
+        margin-bottom: 65px;
+    }
+
+    .employee-info {
+        grid-template-columns: 1fr;
+
+        row-gap: 20px;
+    }
+
+    .pay-details {
+        gap: 25px;
+    }
+
+    .net-pay-box {
+        padding: 15px 18px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 6px;
+    }
+
+    .net-pay-amount {
+        font-size: 27px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .secondary-btn {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .main-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .back-link {
+        font-size: 14px;
+    }
+
+    .payslip-card {
+        padding: 20px 15px;
+    }
+
+    .payslip-logo {
+        margin-bottom: 50px;
+    }
+
+    .pay-row {
+        font-size: 14px;
+    }
+
+    .net-pay-title {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================
+   PAYSLIP MONTH SELECTOR
+========================================= */
+
+.payslip-month-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border: 1px solid #dce1ea;
+    border-radius: 11px;
+    padding: 0 14px;
+    height: 46px;
+}
+
+.payslip-month-selector .month-nav {
+    background: none;
+    border: none;
+    color: #6b7a92;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.payslip-month-selector .month-nav:hover { color: #394c91; }
+
+.payslip-month-selector .month-display {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a2233;
+    min-width: 120px;
+    text-align: center;
+}
+
+@media (max-width: 650px) {
+    .payslip-month-selector .month-display { min-width: 90px; font-size: 13px; }
+}
