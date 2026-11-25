@@ -1,3 +1,11 @@
+:root{
+  --brand: #33427E;  /* blue */
+  --teal: #2F8F83;
+  --amber: #D9A03F;
+  --rose: #C95563;
+  --clay: #C2703B;
+}
+
 *{ box-sizing: border-box; }
 
 body{

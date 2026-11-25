@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../css/hr/add-employee.css">
-  <link rel="stylesheet" href="../../css/hr/hr-theme.css">
 </head>
 <body>
 
@@ -39,7 +38,7 @@
 
     <nav class="nav-group">
       <div class="nav-label">Organization</div>
-      <a class="nav-item " href="departmnts.html"><i class="bi bi-diagram-3"></i> Departments</a>
+      <a class="nav-item " href="departments.html"><i class="bi bi-diagram-3"></i> Departments</a>
       <a class="nav-item " href="settings.html"><i class="bi bi-gear"></i> Settings</a>
     </nav>
 
@@ -51,7 +50,7 @@
           <div class="foot-role">HR Manager</div>
         </div>
       </a>
-      <a href="../login.html" class="icon-btn" style="width:32px;height:32px;flex-shrink:0;" title="Log out">
+      <a href="login.html" class="icon-btn" style="width:32px;height:32px;flex-shrink:0;" title="Log out">
         <i class="bi bi-box-arrow-right"></i>
       </a>
     </div>
@@ -73,15 +72,15 @@
         <div class="panel-title" style="margin-bottom:18px;">Personal details</div>
         <div class="form-row">
           <label>Full name</label>
-          <input type="text" placeholder="e.g. Meera Kulkarni">
+          <input type="text" id="f-name" required placeholder="e.g. Meera Kulkarni">
         </div>
         <div class="form-row">
           <label>Email</label>
-          <input type="email" placeholder="meera.kulkarni@hrm.co">
+          <input type="email" id="f-email" placeholder="meera.kulkarni@HRM.co">
         </div>
         <div class="form-row" style="margin-bottom:0;">
           <label>Phone</label>
-          <input type="text" placeholder="+91 90000 00000">
+          <input type="text" id="f-phone" placeholder="+91 90000 00000">
         </div>
       </div>
 
@@ -89,15 +88,15 @@
         <div class="panel-title" style="margin-bottom:18px;">Employment details</div>
         <div class="form-row">
           <label>Department</label>
-          <select><option>IT</option><option>Marketing</option><option>Finance</option><option>HR</option></select>
+          <select id="f-dept"><option>IT</option><option>Marketing</option><option>Finance</option><option>HR</option></select>
         </div>
         <div class="form-row">
           <label>Job title</label>
-          <input type="text" placeholder="e.g. Product Designer">
+          <input type="text" id="f-title" required placeholder="e.g. Product Designer">
         </div>
         <div class="form-row" style="margin-bottom:0;">
           <label>Employment type</label>
-          <select><option>Full-time</option><option>Part-time</option><option>Contract</option></select>
+          <select id="f-type"><option>Full-time</option><option>Part-time</option><option>Contract</option></select>
         </div>
       </div>
     </div>
@@ -107,22 +106,24 @@
       <div class="info-grid">
         <div class="form-row" style="margin-bottom:0;">
           <label>Joining date</label>
-          <input type="text" placeholder="dd/mm/yyyy">
+          <input type="text" id="f-join" placeholder="dd/mm/yyyy">
         </div>
         <div class="form-row" style="margin-bottom:0;">
           <label>Reporting manager</label>
-          <select><option>Arjun Kapoor</option><option>Sana Iqbal</option><option>Divya Rao</option><option>Ananya Verma</option></select>
+          <select id="f-manager"><option>Arjun Kapoor</option><option>Sana Iqbal</option><option>Divya Rao</option><option>Ananya Verma</option></select>
         </div>
       </div>
     </div>
 
     <div style="display:flex;gap:12px;margin-top:22px;">
-      <a href="people.html" class="btn-primary"><i class="bi bi-check-lg"></i> Save employee</a>
+      <a href="#" id="save-btn" class="btn-primary"><i class="bi bi-check-lg"></i> Save employee</a>
       <a href="people.html" class="btn-ghost">Cancel</a>
     </div>
 
   </main>
 </div>
 
+<script src="../../js/hr/employees.js"></script>
+<script src="../../js/hr/add-employee.js"></script>
 </body>
 </html>

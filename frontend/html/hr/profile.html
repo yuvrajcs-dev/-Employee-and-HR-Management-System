@@ -1,720 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HRM — Employee Profile</title>
 
-    <title>Trellis — HR Profile</title>
-
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    
-    <link rel="stylesheet" href="../../css/hr/hr-profile.css">
-  <link rel="stylesheet" href="../../css/hr/hr-theme.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../css/hr/profile.css">
 </head>
-
-
 <body>
 
-    <div class="layout">
-
-        
-
-        <aside class="sidebar">
-
-            <div class="brand">
-
-                <a href="dashboard.html">
-
-                    <div class="brand-mark"></div>
-
-                    <div>
-                        <div class="brand-name">HRM</div>
-                        <div class="brand-sub">Workforce OS</div>
-                    </div>
-
-                </a>
-
-            </div>
-
-
-            
-
-            <nav class="navigation">
-
-                <div class="nav-title">
-                    WORKSPACE
-                </div>
-
-                <a href="dashboard.html" class="nav-link">
-                    <span class="nav-icon"><i class="bi bi-grid-1x2" aria-hidden="true"></i></span>
-                    Overview
-                </a>
-
-                <a href="people.html" class="nav-link">
-                    <span class="nav-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
-                    People
-                </a>
-
-                <a href="attendance.html" class="nav-link">
-                    <span class="nav-icon"><i class="bi bi-calendar-check" aria-hidden="true"></i></span>
-                    Attendance
-                </a>
-
-                <a href="leave.html" class="nav-link">
-                    <span class="nav-icon"><i class="bi bi-airplane" aria-hidden="true"></i></span>
-                    Leave
-                </a>
-
-                <a href="payroll.html" class="nav-link">
-                    <span class="nav-icon"><i class="bi bi-wallet2" aria-hidden="true"></i></span>
-                    Payroll
-                </a>
-
-            </nav>
-
-
-            
-
-            <nav class="navigation">
-
-                <div class="nav-title">
-                    ORGANIZATION
-                </div>
-
-                <a href="departmnts.html" class="nav-link">
-                    <span class="nav-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></span>
-                    Departments
-                </a>
-
-                <a href="settings.html" class="nav-link">
-                    <span class="nav-icon"><i class="bi bi-gear" aria-hidden="true"></i></span>
-                    Settings
-                </a>
-
-            </nav>
-
-
-            
-
-            <div class="sidebar-bottom">
-
-                <a href="profile.html" class="sidebar-user">
-
-                    <div class="small-avatar" id="sidebar-avatar">
-                        AV
-                    </div>
-
-                    <div>
-                        <div class="user-name" id="sidebar-name">
-                            Ananya Verma
-                        </div>
-
-                        <div class="user-role" id="sidebar-role">
-                            HR Manager
-                        </div>
-                    </div>
-
-                </a>
-
-                <a href="../login.html" class="logout">
-                    →
-                </a>
-
-            </div>
-
-        </aside>
-
-
-        
-
-        <main class="main">
-
-
-            <!-- Page heading -->
-
-            <header class="page-header">
-
-                <div>
-
-                    <h1>
-                        HR Profile
-                    </h1>
-
-                    <p>
-                        Manage your personal and professional information.
-                    </p>
-
-                </div>
-
-                <button class="edit-button" id="btn-edit-profile">
-                    ✎ &nbsp; Edit Profile
-                </button>
-
-            </header>
-
-
-
-            <section class="profile-card">
-
-                <div class="profile-avatar" id="profile-avatar" title="Click to customize profile avatar">
-                    AV
-                </div>
-
-                <div class="profile-main-info">
-
-                    <h2 id="profile-name">
-                        Ananya Verma
-                    </h2>
-
-                    <h3 id="profile-role">
-                        HR Manager
-                    </h3>
-
-                    <p id="profile-company">
-                        People & Culture · Trellis Technologies Pvt. Ltd.
-                    </p>
-
-                </div>
-
-            </section>
-
-
-            
-
-            <section class="stats">
-
-                <div class="stat-card" data-stat="employees" title="Click to view headcount breakdown">
-
-                    <div class="stat-number">
-                        124
-                    </div>
-
-                    <div class="stat-label">
-                        Total Employees
-                    </div>
-
-                </div>
-
-
-                <div class="stat-card" data-stat="requests" title="Click to view pending requests breakdown">
-
-                    <div class="stat-number">
-                        8
-                    </div>
-
-                    <div class="stat-label">
-                        Pending Requests
-                    </div>
-
-                </div>
-
-
-                <div class="stat-card" data-stat="reviews" title="Click to view review cycle details">
-
-                    <div class="stat-number">
-                        3
-                    </div>
-
-                    <div class="stat-label">
-                        Pending Reviews
-                    </div>
-
-                </div>
-
-
-                <div class="stat-card" data-stat="tenure" title="Click to view career journey">
-
-                    <div class="stat-number">
-                        2.4 yrs
-                    </div>
-
-                    <div class="stat-label">
-                        At Trellis
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            
-
-            <section class="information-grid">
-
-
-                
-
-                <div class="card">
-
-                    <h2 class="card-title">
-                        Personal Information
-                    </h2>
-
-
-                    <div class="info-row">
-
-                        <span class="info-label">
-                            Email
-                        </span>
-
-                        <span class="info-value" id="info-email">
-                            ananya.verma@trellis.co
-                        </span>
-
-                    </div>
-
-
-                    <div class="info-row">
-
-                        <span class="info-label">
-                            Phone
-                        </span>
-
-                        <span class="info-value" id="info-phone">
-                            +91 98765 12345
-                        </span>
-
-                    </div>
-
-
-                    <div class="info-row">
-
-                        <span class="info-label">
-                            Location
-                        </span>
-
-                        <span class="info-value" id="info-location">
-                            Delhi NCR, India
-                        </span>
-
-                    </div>
-
-
-                    <div class="info-row">
-
-                        <span class="info-label">
-                            Date of Birth
-                        </span>
-
-                        <span class="info-value" id="info-dob">
-                            14 February 1999
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                
-                <div class="card">
-
-                    <h2 class="card-title">
-                        Professional Information
-                    </h2>
-
-
-                    <div class="info-row">
-
-                        <span class="info-label">
-                            Employee ID
-                        </span>
-
-                        <span class="info-value" id="info-empid">
-                            TRL-HR-001
-                        </span>
-
-                    </div>
-
-
-                    <div class="info-row">
-
-                        <span class="info-label">
-                            Department
-                        </span>
-
-                        <span class="info-value" id="info-department">
-                            People & Culture
-                        </span>
-
-                    </div>
-
-
-                    <div class="info-row">
-
-                        <span class="info-label">
-                            Role
-                        </span>
-
-                        <span class="info-value" id="info-role">
-                            HR Manager
-                        </span>
-
-                    </div>
-
-
-                    <div class="info-row">
-
-                        <span class="info-label">
-                            Joined
-                        </span>
-
-                        <span class="info-value" id="info-joined">
-                            March 2024
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            
-
-            <section class="section">
-
-                <h2 class="section-title">
-                    HR Responsibilities
-                </h2>
-
-
-                <div class="responsibility-grid">
-
-
-                    <div class="responsibility-card" data-responsibility="employees" title="Manage employee records and onboarding">
-
-                        <div class="responsibility-icon">
-                            ♙
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Employee Management
-                            </h3>
-
-                            <p>
-                                Manage employee records, onboarding and workforce information.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <a href="attendance.html" class="responsibility-card" title="Open Attendance Management page">
-
-                        <div class="responsibility-icon">
-                            ✓
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Attendance &nbsp;↗
-                            </h3>
-
-                            <p>
-                                Review attendance records and resolve attendance issues.
-                            </p>
-
-                        </div>
-
-                    </a>
-
-
-                    <a href="leave.html" class="responsibility-card" title="Open Leave Management page">
-
-                        <div class="responsibility-icon">
-                            ✈
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Leave Management &nbsp;↗
-                            </h3>
-
-                            <p>
-                                Review and approve employee leave requests.
-                            </p>
-
-                        </div>
-
-                    </a>
-
-
-                    <div class="responsibility-card" data-responsibility="payroll" title="Coordinate payroll processing">
-
-                        <div class="responsibility-icon">
-                            ₹
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Payroll
-                            </h3>
-
-                            <p>
-                                Coordinate payroll processing and employee compensation records.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            
-
-            <section class="section">
-
-                <div class="activity-header-wrap">
-
-                    <h2 class="section-title">
-                        Recent HR Activity
-                    </h2>
-
-                    <div class="activity-actions-row">
-
-                        <div class="activity-filter-pills" id="activity-filter-pills">
-                            <button class="activity-pill active" data-filter="all">All</button>
-                            <button class="activity-pill" data-filter="leave">Leave</button>
-                            <button class="activity-pill" data-filter="employee">Employees</button>
-                            <button class="activity-pill" data-filter="payroll">Payroll</button>
-                            <button class="activity-pill" data-filter="attendance">Attendance</button>
-                        </div>
-
-                        <button class="btn-log-activity" id="btn-log-activity">
-                            + &nbsp; Log Activity
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-                <div class="card activity-card" id="activity-list">
-
-
-                    <div class="activity" data-category="leave">
-
-                        <div class="activity-dot green"></div>
-
-                        <div>
-
-                            <div class="activity-time">
-                                Today, 10:24 AM
-                            </div>
-
-                            <div class="activity-text">
-                                Approved leave request for <strong>Rahul Sharma</strong>
-                            </div>
-
-                        </div>
-
-                        <button class="activity-delete-btn" title="Remove activity log">&times;</button>
-
-                    </div>
-
-
-                    <div class="activity" data-category="employee">
-
-                        <div class="activity-dot yellow"></div>
-
-                        <div>
-
-                            <div class="activity-time">
-                                Today, 09:15 AM
-                            </div>
-
-                            <div class="activity-text">
-                                Added a new employee to the <strong>Engineering</strong> department
-                            </div>
-
-                        </div>
-
-                        <button class="activity-delete-btn" title="Remove activity log">&times;</button>
-
-                    </div>
-
-
-                    <div class="activity" data-category="payroll">
-
-                        <div class="activity-dot blue"></div>
-
-                        <div>
-
-                            <div class="activity-time">
-                                Yesterday, 04:40 PM
-                            </div>
-
-                            <div class="activity-text">
-                                Completed August payroll processing
-                            </div>
-
-                        </div>
-
-                        <button class="activity-delete-btn" title="Remove activity log">&times;</button>
-
-                    </div>
-
-
-                    <div class="activity" data-category="attendance">
-
-                        <div class="activity-dot green"></div>
-
-                        <div>
-
-                            <div class="activity-time">
-                                28 Aug
-                            </div>
-
-                            <div class="activity-text">
-                                Updated employee attendance records
-                            </div>
-
-                        </div>
-
-                        <button class="activity-delete-btn" title="Remove activity log">&times;</button>
-
-                    </div>
-
-
-                </div>
-
-            </section>
-
-
-        </main>
-
+<div class="shell">
+
+  
+  <aside class="sidebar">
+    <div class="brand">
+      <a href="dashboard.html" style="display:flex;align-items:center;gap:10px;color:inherit;">
+      <div class="brand-mark"></div>
+      <div>
+        <div class="brand-name">HRM</div>
+        <div class="brand-sub">Workforce OS</div>
+      </div>
+      </a>
     </div>
 
-    <!-- EDIT PROFILE MODAL -->
-    <div class="modal-overlay" id="edit-profile-modal" aria-hidden="true" role="dialog" aria-modal="true">
-        <div class="modal-box">
-            <div class="modal-header">
-                <h3>Edit HR Profile</h3>
-                <button class="modal-close-btn" id="edit-modal-close" aria-label="Close modal">&times;</button>
-            </div>
-            <form id="edit-profile-form">
-                <div class="modal-body">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label" for="edit-name">Full Name</label>
-                            <input type="text" id="edit-name" class="form-input" value="Ananya Verma" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="edit-role">Role Title</label>
-                            <input type="text" id="edit-role" class="form-input" value="HR Manager" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label" for="edit-dept">Department</label>
-                            <input type="text" id="edit-dept" class="form-input" value="People & Culture" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="edit-email">Email Address</label>
-                            <input type="email" id="edit-email" class="form-input" value="ananya.verma@trellis.co" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label" for="edit-phone">Phone Number</label>
-                            <input type="tel" id="edit-phone" class="form-input" value="+91 98765 12345" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="edit-location">Location</label>
-                            <input type="text" id="edit-location" class="form-input" value="Delhi NCR, India" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="edit-dob">Date of Birth</label>
-                        <input type="text" id="edit-dob" class="form-input" value="14 February 1999" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Avatar Accent Theme</label>
-                        <div class="color-choice-row" id="avatar-color-choices">
-                            <div class="color-choice selected" data-color="#2563eb" style="background:#2563eb;" title="Royal Blue"></div>
-                            <div class="color-choice" data-color="#7c3aed" style="background:#7c3aed;" title="Purple"></div>
-                            <div class="color-choice" data-color="#059669" style="background:#059669;" title="Emerald"></div>
-                            <div class="color-choice" data-color="#e11d48" style="background:#e11d48;" title="Rose"></div>
-                            <div class="color-choice" data-color="#d97706" style="background:#d97706;" title="Amber"></div>
-                            <div class="color-choice" data-color="#0f172a" style="background:#0f172a;" title="Slate Navy"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn-ghost" id="edit-modal-cancel">Cancel</button>
-                    <button type="submit" class="edit-button">Save Changes</button>
-                </div>
-            </form>
+    <nav class="nav-group">
+      <div class="nav-label">Workspace</div>
+      <a class="nav-item " href="dashboard.html"><i class="bi bi-grid-1x2"></i> Overview</a>
+      <a class="nav-item active" href="people.html"><i class="bi bi-people"></i> People</a>
+      <a class="nav-item " href="attendance.html"><i class="bi bi-calendar-check"></i> Attendance</a>
+      <a class="nav-item " href="leave.html"><i class="bi bi-airplane"></i> Leave</a>
+      <a class="nav-item " href="payroll.html"><i class="bi bi-wallet2"></i> Payroll</a>
+    </nav>
+
+    <nav class="nav-group">
+      <div class="nav-label">Organization</div>
+      <a class="nav-item " href="departments.html"><i class="bi bi-diagram-3"></i> Departments</a>
+      <a class="nav-item " href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+    </nav>
+
+    <div class="sidebar-foot" style="justify-content:space-between;">
+      <a href="profile.html" style="display:flex;align-items:center;gap:10px;color:inherit;">
+        <div class="avatar-sm">AV</div>
+        <div>
+          <div class="foot-name">Ananya Verma</div>
+          <div class="foot-role">HR Manager</div>
         </div>
+      </a>
+      <a href="login.html" class="icon-btn" style="width:32px;height:32px;flex-shrink:0;" title="Log out">
+        <i class="bi bi-box-arrow-right"></i>
+      </a>
+    </div>
+  </aside>
+
+  
+  <main class="main">
+
+    <div class="profile-header">
+      <div class="profile-photo" data-f="initials"></div>
+      <div>
+        <div class="profile-name" data-f="name"></div>
+        <div class="profile-role" data-f="roleLine"></div>
+        <div class="profile-since" data-f="since"></div>
+      </div>
+    </div>
+    <div class="profile-stat-strip">
+      <div class="profile-stat"><div class="profile-stat-num" data-f="attendance"></div><div class="profile-stat-label">Attendance</div></div>
+      <div class="profile-stat"><div class="profile-stat-num" data-f="leave"></div><div class="profile-stat-label">Leave balance</div></div>
+      <div class="profile-stat"><div class="profile-stat-num" data-f="experience"></div><div class="profile-stat-label">Experience</div></div>
     </div>
 
-    <!-- STAT DRILLDOWN MODAL -->
-    <div class="modal-overlay" id="stat-modal" aria-hidden="true" role="dialog" aria-modal="true">
-        <div class="modal-box">
-            <div class="modal-header">
-                <h3 id="stat-modal-title">Metric Breakdown</h3>
-                <button class="modal-close-btn" id="stat-modal-close" aria-label="Close modal">&times;</button>
-            </div>
-            <div class="modal-body" id="stat-modal-body">
-                <!-- Dynamically populated -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn-ghost" id="stat-modal-dismiss">Close</button>
-            </div>
+    <div class="bento" style="margin-top:24px;">
+      <div class="panel">
+        <div class="panel-title" style="margin-bottom:16px;">Personal information</div>
+        <div class="info-row"><div class="k">Email</div><div class="v" data-f="email"></div></div>
+        <div class="info-row"><div class="k">Phone</div><div class="v" data-f="phone"></div></div>
+        <div class="info-row"><div class="k">Location</div><div class="v" data-f="location"></div></div>
+        <div class="info-row"><div class="k">Emergency contact</div><div class="v" data-f="emergency"></div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-title" style="margin-bottom:16px;">Professional information</div>
+        <div class="info-row"><div class="k">Employee ID</div><div class="v" data-f="empId"></div></div>
+        <div class="info-row"><div class="k">Reporting manager</div><div class="v" data-f="manager"></div></div>
+        <div class="info-row"><div class="k">Employment type</div><div class="v" data-f="type"></div></div>
+        <div class="info-row"><div class="k">Work location</div><div class="v" data-f="workLocation"></div></div>
+      </div>
+    </div>
+
+    <div id="activity">
+    <div class="section-heading serif">Recent activity</div>
+    <div class="panel">
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-dot" style="background:var(--teal)"></div>
+          <div><div class="t-time">Today, 09:02 AM</div><div class="t-text">Checked in</div></div>
         </div>
-    </div>
-
-    <!-- LOG ACTIVITY MODAL -->
-    <div class="modal-overlay" id="log-activity-modal" aria-hidden="true" role="dialog" aria-modal="true">
-        <div class="modal-box">
-            <div class="modal-header">
-                <h3>Log HR Activity</h3>
-                <button class="modal-close-btn" id="log-modal-close" aria-label="Close modal">&times;</button>
-            </div>
-            <form id="log-activity-form">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label class="form-label" for="activity-category-select">Activity Domain</label>
-                        <select id="activity-category-select" class="form-select">
-                            <option value="leave">Leave Management</option>
-                            <option value="employee">Employee Management</option>
-                            <option value="attendance">Attendance</option>
-                            <option value="payroll">Payroll</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="activity-text-input">Activity Description</label>
-                        <textarea id="activity-text-input" class="form-textarea" rows="3" placeholder="Describe the action or milestone completed..." required></textarea>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn-ghost" id="log-modal-cancel">Cancel</button>
-                    <button type="submit" class="edit-button">Post to Feed</button>
-                </div>
-            </form>
+        <div class="t-item">
+          <div class="t-dot" style="background:var(--amber)"></div>
+          <div><div class="t-time">28 Aug</div><div class="t-text">Submitted a leave request for <b>3–5 Sep</b></div></div>
         </div>
+        <div class="t-item">
+          <div class="t-dot" style="background:var(--brand)"></div>
+          <div><div class="t-time">1 Aug</div><div class="t-text">Completed annual performance review</div></div>
+        </div>
+      </div>
+    </div>
     </div>
 
-    <!-- TOAST CONTAINER -->
-    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+  </main>
+</div>
 
-    <script src="../../js/hr/profile.js"></script>
+<script src="../../js/hr/employees.js"></script>
+<script src="../../js/hr/profile.js"></script>
 </body>
-
 </html>
-

@@ -11,7 +11,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../css/hr/dashboard.css">
 
-  <link rel="stylesheet" href="../../css/hr/hr-theme.css">
 </head>
 <body>
 
@@ -38,7 +37,7 @@
 
     <nav class="nav-group">
       <div class="nav-label">Organization</div>
-      <a class="nav-item" href="departmnts.html"><i class="bi bi-diagram-3"></i> Departments</a>
+      <a class="nav-item" href="departments.html"><i class="bi bi-diagram-3"></i> Departments</a>
       <a class="nav-item" href="settings.html"><i class="bi bi-gear"></i> Settings</a>
     </nav>
 
@@ -50,7 +49,7 @@
           <div class="foot-role">HR Manager</div>
         </div>
       </a>
-      <a href="../login.html" class="icon-btn" style="width:32px;height:32px;flex-shrink:0;" title="Log out">
+      <a href="login.html" class="icon-btn" style="width:32px;height:32px;flex-shrink:0;" title="Log out">
         <i class="bi bi-box-arrow-right"></i>
       </a>
     </div>
@@ -65,8 +64,17 @@
         <p>Here's how the organization is doing today — Tuesday, 1 September.</p>
       </div>
       <div class="head-tools">
-        <div class="search-box"><i class="bi bi-search"></i> Search people…</div>
-        <div class="icon-btn"><i class="bi bi-bell"></i><span class="dot"></span></div>
+        <div class="search-box" id="search-btn"><i class="bi bi-search"></i> Search people…</div>
+        <div style="position:relative;">
+          <div class="icon-btn" id="bell-btn"><i class="bi bi-bell"></i><span class="dot" id="bell-dot"></span></div>
+          <div class="notif-box" id="notif-box">
+            <div class="notif-title">Notifications</div>
+            <div class="notif-item"><b>Priya Nair</b> submitted a leave request</div>
+            <div class="notif-item"><b>4 leave requests</b> are waiting for review</div>
+            <div class="notif-item"><b>2 employees</b> are absent without a reason</div>
+            <div class="notif-item">Payroll for <b>August</b> was processed</div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -202,26 +210,36 @@
     
     <div class="section-heading serif">Today's focus</div>
     <div class="focus-strip">
-      <a class="focus-item" href="leave.html" style="text-decoration:none;color:inherit;">
+      <div class="focus-item">
         <div class="focus-num">04</div>
         <div class="focus-text"><b>Leave requests</b>waiting on review</div>
-      </a>
-      <a class="focus-item" href="attendance.html" style="text-decoration:none;color:inherit;">
+      </div>
+      <div class="focus-item">
         <div class="focus-num">02</div>
         <div class="focus-text"><b>Employees absent</b>without a logged reason</div>
-      </a>
-      <a class="focus-item" href="payroll.html" style="text-decoration:none;color:inherit;">
+      </div>
+      <div class="focus-item">
         <div class="focus-num">03</div>
         <div class="focus-text"><b>Payroll records</b>pending approval</div>
-      </a>
-      <a class="focus-item" href="people.html" style="text-decoration:none;color:inherit;">
+      </div>
+      <div class="focus-item">
         <div class="focus-num">01</div>
         <div class="focus-text"><b>Onboarding</b>in progress this week</div>
-      </a>
+      </div>
     </div>
 
   </main>
 </div>
 
+<div class="modal-bg" id="search-modal">
+  <div class="modal-box">
+    <input type="text" id="search-input" placeholder="Type a name, role or department…">
+    <div id="search-results"></div>
+    <button class="modal-close" id="search-close">Close</button>
+  </div>
+</div>
+
+<script src="../../js/hr/employees.js"></script>
+<script src="../../js/hr/dashboard.js"></script>
 </body>
 </html>

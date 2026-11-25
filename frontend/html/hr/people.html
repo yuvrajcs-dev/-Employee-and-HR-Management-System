@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../css/hr/people.css">
-  <link rel="stylesheet" href="../../css/hr/hr-theme.css">
 </head>
 <body>
 
@@ -39,7 +38,7 @@
 
     <nav class="nav-group">
       <div class="nav-label">Organization</div>
-      <a class="nav-item " href="departmnts.html"><i class="bi bi-diagram-3"></i> Departments</a>
+      <a class="nav-item " href="departments.html"><i class="bi bi-diagram-3"></i> Departments</a>
       <a class="nav-item " href="settings.html"><i class="bi bi-gear"></i> Settings</a>
     </nav>
 
@@ -51,7 +50,7 @@
           <div class="foot-role">HR Manager</div>
         </div>
       </a>
-      <a href="../login.html" class="icon-btn" style="width:32px;height:32px;flex-shrink:0;" title="Log out">
+      <a href="login.html" class="icon-btn" style="width:32px;height:32px;flex-shrink:0;" title="Log out">
         <i class="bi bi-box-arrow-right"></i>
       </a>
     </div>
@@ -66,105 +65,25 @@
         <p style="color:var(--ink-soft);font-size:.9rem;margin:0;">248 employees across 4 departments</p>
       </div>
       <div style="display:flex;gap:10px;">
-        <div class="search-box" style="width:220px;"><i class="bi bi-search"></i> Search people…</div>
+        <div class="search-box" style="width:220px;"><i class="bi bi-search"></i><input type="text" id="people-search" placeholder="Search people…"></div>
         <a class="btn-primary" href="add-employee.html"><i class="bi bi-plus-lg"></i> Add employee</a>
       </div>
     </div>
 
     <div class="chip-row" style="margin-bottom:22px;">
-      <div class="chip active">All departments</div>
-      <div class="chip">IT</div>
-      <div class="chip">Marketing</div>
-      <div class="chip">Finance</div>
-      <div class="chip">HR</div>
+      <div class="chip active" data-dept="All">All departments</div>
+      <div class="chip" data-dept="IT">IT</div>
+      <div class="chip" data-dept="Marketing">Marketing</div>
+      <div class="chip" data-dept="Finance">Finance</div>
+      <div class="chip" data-dept="HR">HR</div>
     </div>
 
-    <div class="people-grid">
-      <a class="person-card" href="profile.html">
-        <div class="person-avatar" style="background:var(--brand)">RS</div>
-        <div>
-          <div class="person-name">Rahul Sharma</div>
-          <div class="person-role">Software Developer · IT</div>
-          <div class="person-meta"><i class="bi bi-envelope"></i>rahul.sharma@hrm.co</div>
-          <div class="person-meta" style="margin-top:3px;"><i class="bi bi-geo-alt"></i>Delhi NCR</div>
-        </div>
-      </a>
-      <a class="person-card" href="profile.html">
-        <div class="person-avatar" style="background:var(--clay)">PN</div>
-        <div>
-          <div class="person-name">Priya Nair</div>
-          <div class="person-role">UX Designer · IT</div>
-          <div class="person-meta"><i class="bi bi-envelope"></i>priya.nair@hrm.co</div>
-          <div class="person-meta" style="margin-top:3px;"><i class="bi bi-geo-alt"></i>Bengaluru</div>
-        </div>
-      </a>
-      <a class="person-card" href="profile.html">
-        <div class="person-avatar" style="background:var(--teal)">AV</div>
-        <div>
-          <div class="person-name">Amit Verma</div>
-          <div class="person-role">Backend Engineer · IT</div>
-          <div class="person-meta"><i class="bi bi-envelope"></i>amit.verma@hrm.co</div>
-          <div class="person-meta" style="margin-top:3px;"><i class="bi bi-geo-alt"></i>Pune</div>
-        </div>
-      </a>
-      <a class="person-card" href="profile.html">
-        <div class="person-avatar" style="background:var(--rose)">SI</div>
-        <div>
-          <div class="person-name">Sana Iqbal</div>
-          <div class="person-role">Marketing Lead · Marketing</div>
-          <div class="person-meta"><i class="bi bi-envelope"></i>sana.iqbal@hrm.co</div>
-          <div class="person-meta" style="margin-top:3px;"><i class="bi bi-geo-alt"></i>Mumbai</div>
-        </div>
-      </a>
-      <a class="person-card" href="profile.html">
-        <div class="person-avatar" style="background:var(--amber)">KM</div>
-        <div>
-          <div class="person-name">Karan Mehta</div>
-          <div class="person-role">Content Strategist · Marketing</div>
-          <div class="person-meta"><i class="bi bi-envelope"></i>karan.mehta@hrm.co</div>
-          <div class="person-meta" style="margin-top:3px;"><i class="bi bi-geo-alt"></i>Delhi NCR</div>
-        </div>
-      </a>
-      <a class="person-card" href="profile.html">
-        <div class="person-avatar" style="background:var(--brand)">DR</div>
-        <div>
-          <div class="person-name">Divya Rao</div>
-          <div class="person-role">Financial Analyst · Finance</div>
-          <div class="person-meta"><i class="bi bi-envelope"></i>divya.rao@hrm.co</div>
-          <div class="person-meta" style="margin-top:3px;"><i class="bi bi-geo-alt"></i>Hyderabad</div>
-        </div>
-      </a>
-      <a class="person-card" href="profile.html">
-        <div class="person-avatar" style="background:var(--teal)">FA</div>
-        <div>
-          <div class="person-name">Farhan Ali</div>
-          <div class="person-role">Accountant · Finance</div>
-          <div class="person-meta"><i class="bi bi-envelope"></i>farhan.ali@hrm.co</div>
-          <div class="person-meta" style="margin-top:3px;"><i class="bi bi-geo-alt"></i>Mumbai</div>
-        </div>
-      </a>
-      <a class="person-card" href="profile.html">
-        <div class="person-avatar" style="background:var(--clay)">NG</div>
-        <div>
-          <div class="person-name">Neha Gupta</div>
-          <div class="person-role">HR Executive · HR</div>
-          <div class="person-meta"><i class="bi bi-envelope"></i>neha.gupta@hrm.co</div>
-          <div class="person-meta" style="margin-top:3px;"><i class="bi bi-geo-alt"></i>Delhi NCR</div>
-        </div>
-      </a>
-      <a class="person-card" href="profile.html">
-        <div class="person-avatar" style="background:var(--rose)">VS</div>
-        <div>
-          <div class="person-name">Vikram Singh</div>
-          <div class="person-role">Talent Acquisition · HR</div>
-          <div class="person-meta"><i class="bi bi-envelope"></i>vikram.singh@hrm.co</div>
-          <div class="person-meta" style="margin-top:3px;"><i class="bi bi-geo-alt"></i>Pune</div>
-        </div>
-      </a>
-    </div>
+    <div class="people-grid" id="people-grid"></div>
 
   </main>
 </div>
 
+<script src="../../js/hr/employees.js"></script>
+<script src="../../js/hr/people.js"></script>
 </body>
 </html>
