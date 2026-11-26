@@ -124,6 +124,7 @@ Located in `frontend/html/hr/`:
 -Employee-and-HR-Management-System/
 ├── README.md
 ├── frontend/
+│   ├── index.html                      # Landing page / System index
 │   ├── assest/                         # Static assets & profile images
 │   │   └── ujjwal.jpg
 │   ├── css/                            # Stylesheets
@@ -149,7 +150,6 @@ Located in `frontend/html/hr/`:
 │   │       └── style.css
 │   ├── html/                           # Web pages
 │   │   ├── login.html                  # Unified entry / Sign-in page
-│   │   ├── main-dashboard.html         # Landing page / System index
 │   │   ├── employee/                   # Employee views
 │   │   │   ├── portal.html             # Employee Dashboard
 │   │   │   ├── attendance.html         # Employee Attendance Calendar

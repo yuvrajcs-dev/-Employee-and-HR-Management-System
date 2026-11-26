@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Logout
     document.querySelector(".logout-btn")?.addEventListener("click", () => {
-        if (window.confirm("Log out of HRM?")) window.location.href = "../main-dashboard.html";
+        if (window.confirm("Log out of HRM?")) window.location.href = "../../index.html";
     });
 
     // Search / filter
